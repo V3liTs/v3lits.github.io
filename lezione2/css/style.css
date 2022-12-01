@@ -1,11 +1,11 @@
 /* General styles */
-
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 body {
     margin: 0;
   }
   
   html {
-    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-family: 'Nerko One', cursive;
     font-size: 10px;
     background-color: #ccc;
   }
