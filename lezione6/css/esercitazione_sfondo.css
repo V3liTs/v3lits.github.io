@@ -10,13 +10,10 @@ body {
   }
 
   p {
-    border: 0.8em darkviolet;
     border-style: linear;
     margin: 1em 0;
     padding: 1.4em;
-    background: linear-gradient(60deg, red, yellow, red, yellow, red);
     font: 900 1.2em sans-serif;
-    text-decoration: underline;
     border-radius: 30px;
   }
 
@@ -35,9 +32,16 @@ body {
     background-origin: border-box;
     background-image: url("../assets/lizard.png");
     border: 0.8em black;
-    border-style: inset;
+    border-style: dotted double;
     margin: 1em 0;
     padding: 1.4em;
     font: 900 1.2em sans-serif;
-    text-decoration: underline;
+  }
+  
+  .sfondonorepeat3 {
+    background-origin: border-box;
+    background-image: url("../assets/asp.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    cursor: wait;
   }
