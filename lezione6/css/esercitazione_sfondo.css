@@ -1,0 +1,43 @@
+body {
+    background-color: #DAE0E6;
+  }
+
+  .border-box {
+    background-clip: border-box;
+    background: rgb(1,72,114);
+    background: linear-gradient(90deg, rgba(1,72,114,1) 35%, rgba(215,237,225,1) 100%);
+    border-radius: 30px;
+  }
+
+  p {
+    border: 0.8em darkviolet;
+    border-style: linear;
+    margin: 1em 0;
+    padding: 1.4em;
+    background: linear-gradient(60deg, red, yellow, red, yellow, red);
+    font: 900 1.2em sans-serif;
+    text-decoration: underline;
+    border-radius: 30px;
+  }
+
+  .sfondo {
+    background-origin: border-box;
+    background-image: url("../assets/lizard.png");
+  }
+
+  .sfondonorepeat {
+    background-origin: border-box;
+    background-image: url("../assets/lizard.png");
+    background-repeat: repeat-y;
+  }
+
+  .sfondonorepeat2 {
+    background-origin: border-box;
+    background-image: url("../assets/lizard.png");
+    border: 0.8em black;
+    border-style: inset;
+    margin: 1em 0;
+    padding: 1.4em;
+    font: 900 1.2em sans-serif;
+    text-decoration: underline;
+  }
