@@ -18,8 +18,16 @@
             background-color: red;
         }
 
+        article.blue {
+            background-color: blue;
+        }
+
+        article.green {
+            background-color: green;
+        }
+
         article span {
-            background-color: black;
+            background-color: orange;
             color: white;
             margin: 1px;
         }
@@ -32,37 +40,29 @@
 
         article,
         div {
-            margin: 20px;
+            margin: 30px;
         }
-
-        .prova {
-            background-color: aqua;          
-        }
-
     </style>
 </head>
 
 <body>
-    <article class="container">
+    <article class="container red">
         <span>First</span>
         <span>Second</span>
         <span>Third</span>
     </article>
 
-    <article class="container">
+    <article class="container blue">
         <span>First</span>
         <span>Second</span>
         <span>Third</span>
     </article>
 
-    <article class="container">
-        <div class="prova">
+    <article class="container green">
         <span>M2 air</span>
         <span>M2 Pro</span>
-        <span>M1 Pro Max</span>
-    </div>
+        <span>M2 Pro Max</span>
     </article>
-    <!--terzo article con colori diversi-->
     <div>
         <label for="display">Choose a display value:</label>
         <select id="display">
