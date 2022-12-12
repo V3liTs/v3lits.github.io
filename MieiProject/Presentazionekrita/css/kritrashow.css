@@ -1,0 +1,152 @@
+@font-face {
+    font-family: "Manrope";
+    src: url(fonts/Manrope) format("truetype");
+  }
+/*Primo box*/
+img {
+    padding-left: 2%;
+}
+
+.testa  {
+    padding: 13px 0;
+    font-size: 16px;
+    margin: 10px;
+    border-bottom: 2px solid #f2f3f3;
+    background-color: #f6ebf4;
+    border-bottom: 5px solid #0000001f;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+
+}
+  
+.logo  {
+    position: center;
+    padding: 12px , 16px;
+    font-size: 28px;
+    
+ }
+
+.allineamento {
+    margin-left: auto; 
+    padding-right: 3%;
+
+
+
+}
+
+.menu {
+    display: inline-block; 
+    font-family:Manrope-Bold;
+    font-size: 20px;
+}
+
+.menu a::before{
+    display: inline-block;
+    color: #000;
+    content: ' | ';
+    font-size: 100%;
+    padding: 0 16px;
+}
+
+
+
+.bottonegreen {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#482673;
+	font-family:Manrope-Bold;
+	font-size:17px;
+	padding:10px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+
+/*Secondo box*/
+
+.testa2  {
+    padding: 13px 0;
+    /* text-align: right; */
+    font-size: 16px;
+    margin: 10px;
+    border-bottom: 2px solid #f2f3f3;
+    position: sticky;
+    top: 0;
+    background-color: #f6ebf4;
+    border-bottom: 5px solid #0000001f;
+    border-radius: 20px;
+  }
+
+  .testo {
+    text-align: justify ;
+    font-size: 28px;
+    padding-left: 2%;
+    
+
+  }
+
+h1,h2,h3{
+
+    font-family:Manrope-Regular;
+}
+
+h5 {
+    font-family:Manrope-Light;
+    font-size: 18px;
+    line-height: 2;
+}
+
+#kitra {
+    margin: auto;
+    width: 700px;
+    float: right;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2%;
+    
+    
+    
+  }
+
+  #elenco {
+    font-family:Manrope-Light;
+    font-size: 18px;
+    line-height: 2;
+
+  }
+
+  #elenco3 {
+    font-family:Manrope-Light;
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  .video-container{
+    width:100%;
+    position: relative;
+    margin:25px auto ;  
+    text-align:center;
+}
+
+#video-1{
+    display:inline-block;
+    box-sizing:border-box;
+    margin: auto;
+    padding-left: 2%;
+}
+  
+body {
+    background-color: #D4ECE5;
+    font-family: "Lucida Bright", sans-serif;
+    margin: 0;
+    font-size: 16px;
+    overflow-x: hidden;
+    color: #482673;
+
+
+}
