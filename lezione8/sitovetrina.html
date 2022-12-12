@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floated</title>
+</head>
+<style>
+    /* 1 STEP : box sizing and lobotimized owl */
+
+    :root {
+        box-sizing: border-box;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: inherit;
+    }
+
+    body *+* {
+        margin-top: 1.5em;
+    }
+
+    /* 2 STEP : generic styling rules */
+
+    body {
+        background: #bbb;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        margin-bottom: 1.5em;
+    }
+
+    header,
+    footer {
+        background-color: #CDDBEA;
+        padding: 1.5em;
+        color: #fff;
+    }
+
+    main {
+        background: #fff;
+        padding: 0 1.5em 1.5em 1.5em;
+    }
+
+    header,
+    footer,
+    main {
+        border-radius: 5px;
+    }
+
+    article {
+        /* background-color: #0D4D7C; */
+        background: rgb(68,203,170);
+        background: linear-gradient(69deg, rgba(68,203,170,1) 0%, rgba(82,223,145,1) 100%);
+        border-radius: 20px;
+        padding: 1.5em;
+    }
+
+    article h4 {
+        margin: 0;
+    }
+
+    /* 3 STEP : applying float section */
+
+    /* double container pattern */
+    .container {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    article {
+        float: left;
+        width: 50%;
+    }
+
+    /* 4 STEP : fixing floating section */
+
+    section::after {
+        display: block;
+        content: " ";
+        clear: both;
+    }
+
+    /* 5 STEP : article margins */
+
+    article {
+        margin: 0 1.5em 1.5em 0;
+        width: calc(50% - 1.5em);
+    }
+
+    /*fixes the margins of the edge children*/
+    section {
+        margin-right: -1.5em;
+        margin-bottom: -1.5em;
+    }
+
+    /* 6 STEP : Fixes collapsing margin of section title */
+
+    section::before {
+        display: table;
+        content: " ";
+    }
+
+    /* 7 STEP : grid row clearfix */
+
+    .articles> :nth-child(2n+1) {
+        clear: left;
+    }
+
+    /* 8 STEP : grid element styling */
+
+    .articles img {
+        float: left;
+        margin: 0 1.5em 1.5em 0;
+    }
+
+    .articles .article-body {
+        overflow: auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="https://images.macrumors.com/images-new/macrumors-simple-logo-light.svg">
+            <h4 style="text-align: center;">Mac and Apple-related news and rumors</h4>
+        </header>
+        <main>
+            <section>
+                <h2 style="text-align: center;">Articles</h2>
+                <div class="articles">
+                    <article>
+                        <img src="https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2022/10/elon-musk-twitter.jpg?w=2000&quality=82&strip=all&ssl=1" width="150" height="150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            
+                            <h4><a href="https://9to5mac.com/2022/12/11/twitter-blue-features-price/">
+                                Ten Ways to Have Yourself a Merry Little Christmas
+                            </a></h4>
+                            <p>
+                                Twitter è pronto a rilanciare il servizio di abbonamento Twitter Blue lunedì. Dopo le speculazioni, la società ha ufficialmente fatto l'annuncio questo fine settimana.
+                            </p>
+
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2022/12/tor-apple-silicon.jpg?w=2000&quality=82&strip=all&ssl=1" width="150" height="150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/10/tor-browser-apple-silicon-optimized/">
+                                Tor Browser ora ottimizzato per Apple Silicon con la nuova app universale
+                            </a></h4>
+                            <p>
+                                Tor Browser è ora ottimizzato per Apple Silicon, grazie a un nuovo aggiornamento lanciato questa settimana Tor Bowser 12.0.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+            Footer element..
+        </footer>
+    </div>
+</body>
+
+</html>
