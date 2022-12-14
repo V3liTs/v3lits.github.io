@@ -1,0 +1,105 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body *+* {
+    margin-top: 1.5em;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin-bottom: 1.5em;
+    
+}
+
+header,
+footer {
+    background-color: grey;
+    padding: 1.5em;
+    color: #fff;
+}
+
+main {
+    background: whitesmoke;
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+header,
+footer,
+main {
+    border-radius: 5px;
+}
+
+article {
+    
+    background: #B6D2E3;
+    padding: 1.5em;
+    border-radius: 15px;
+    background-color: #f6ebf4;
+    border-bottom: 7px solid #0000001f;
+}
+
+article h4 {
+    margin: 0;
+}
+
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+article {
+    float: left;
+    width: 100%;
+}
+
+
+section::after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+
+article {
+    margin: 0 1.5em 1.5em 0;
+    width: calc(50% - 1.5em);
+}
+
+section {
+    margin-right: -1.5em;
+    margin-bottom: -1.5em;
+}
+
+
+section::before {
+    display: table;
+    content: " ";
+}
+
+
+.articles> :nth-child(2n+1) {
+    clear: left;
+}
+
+
+.articles img {
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+}
+
+.articles .article-body {
+    overflow: auto;
+}
+/* classes */
+.centergrid {
+    background-color: blueviolet;
+    display: inline-flex;
+}
