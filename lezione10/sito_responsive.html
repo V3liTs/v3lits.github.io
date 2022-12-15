@@ -10,36 +10,9 @@
 </head>
 
 <body>
-    <!--
-        Creare un sito vetrina con grid che preferite 
-            header con logo GABRIELE
-            nav bar con 3 link almeno ALESSIA
-            un content\main home page con una serie box (immagini e testi -> Titolo con un font più grande non sottolineato e cliccabile che porta a una pagina singola)
-            - flex box articoli ANTONIO
-            - un contenitore a tre colonne con grid RICCARDO
-            footer VALERIO
-
-            Seconda 
-            - sito sia responsive con immagine tagliate o ridotte ad hoc
-            IphoneSe 375 max
-            iPad Mini 768x1024
-            Desktop maggiori
-
-            - mettere i media query
-    -->
-
-    <div class="container">
+    <main>
         <header>
-            <img src="assets/banner.png" alt="Il corriere dei web developer" class="immagec"/>
-            <div class="hflex">
-<!--             <h2>Mercoledì 14 dicembre</h2>
- -->            <div class="social">
-            <h3>I nostri SOCIAL:</h3>
-            <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluency/512/instagram-new.png" width="40px" /></a>
-            <a href="https://www.facebook.com/"><img src="https://img.icons8.com/color/512/facebook.png" width="40px" /></a>
-            <a href="https://www.twitter.com/"><img src="https://img.icons8.com/color/512/twitter-squared.png" width="40px" /></a>
-            </div>    
-            </div>
+            <h1>Corriere del developer</h1>
             <nav>
                 <ul class="header-nav">
                     <li><a href="/">Home</a></li>
@@ -47,171 +20,186 @@
                     <li><a href="/pricing">Dove siamo</a></li>
                     <li class="nav-right">
                         <a href="/about">Contatti</a>
-
                     </li>
                 </ul>
-            </div>
             </nav>
             <div class="banner">
-                <!-- pubblicità -->
+                <img src="assets/banner.png" alt="Il corriere dei web developer" class="immagec" />
             </div>
-
-
             <div class="banner">
                 <!-- pubblicità -->
             </div>
         </header>
-
-
         <main>
             <section>
-                <h2>Le ultime news di mercoledì 14 dicembre </h2>
                 <div class="articles">
-                    <div class="box1">
                     <article>
-                        <img src="https://developer.apple.com/assets/elements/icons/app-updates/app-updates-128x128_2x.png" width="150" alt="img1" class="media-image">
-                        <div class="article-body">
-                            <h4>Apple rilascia iOS e iPadOS 16.2, macOS 13.1, watchOS 9.2 e tvOS 16.2: le novità</h4>
-                            <p>
-                                Apple ha reso disponibili iOS 16.2, iPadOS 16.2, macOS Ventura 13.1, watchOS 9.2, tvOS 16.2 nella tarda serata di ieri, un giorno dopo il consueto rilascio del lunedì. Gli aggiornamenti dovrebbero già essere quindi disponibili al download per tutti, scopriamo come installarli e le novità introdotte da ciascuno dei nuovi firmware.
-                            </p>
-                            <p>
-                                iOS 16.2 e iPadOS 16.2 come sempre sono disponibili sia tramite aggiornamento OTA (Over The Air) da Aggiornamento Software in Impostazioni - Generali su iPhone e iPad, che tramite Finder su Mac e iTunes su PC.
-                            </p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Android_13_Developer_Preview_logo.svg/2060px-Android_13_Developer_Preview_logo.svg.png" width="150" alt="img1" class="media-image">
-                        <div class="article-body">
-                            <h4>Android 13, è arrivata la QPR2 Beta 1: tutte le novità (anche quelle nascoste)</h4>
-                            <p>
-                                Google ha rilasciato nelle scorse ore la prima beta di Android 13 QPR2 agli smartphone Pixel compatibili che partecipano al programma di test anticipati. 
-                            </p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Microsoft_logo_%282012%29_modified.png/640px-Microsoft_logo_%282012%29_modified.png"width="150" alt="img1" class="media-image">
-                        <div class="article-body">
-                            <h4>Microsoft compra il 4% delle quote della Borsa di Londra</h4>
-                            <p>
-                                Microsoft ha comprato circa il 4% delle quote della Borsa di Londra, ovvero la LSEG (London Stock Exchange Group): la notizia è stata diffusa qualche ora fa appena. L'obiettivo della partnership, che durerà 10 anni, è potenziare grazie al cloud di Redmond le capacità di analisi dati di quello che è di fatto uno dei mercati azionari più importanti dell'Europa.
-                            </p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="https://image01-in.oneplus.net/ebp/202211/30/1-m00-49-7e-cpgm7moho-wav3skaakpeohc1ze833.png" width="150" alt="img1" class="media-image">
-                        <div class="article-body">
-                            <h4>OnePlus, da oggi, è anche monitor: ecco un 27 e un 24 per l'India</h4>
-                            <p>
-                                OnePlus tenta una nuova avventura, quella nel panorama dei monitor. La prima OnePlus, quella guidata dal duo Carl Pei / Pete Lau, difficilmente avrebbe occupato anche questo mercato, così come probabilmente non avrebbe esteso la gamma smartphone fino ai prodotti più economici - viene in mente Nord N300 5G. 
-                            </p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Rivian_Logo_Black.png" width="150" alt="img1" class="media-image">
-                        <div class="article-body">
-                            <h4>Mercedes, sospeso l'accordo di collaborazione con Rivian</h4>
-                            <p>
-                                Mercedes ha riorganizzato la sua rete di produzione europea dei van in preparazione dell'utilizzo della nuova piattaforma VAN.EA che permetterà di realizzare van elettrici di medie e grandi dimensioni. La novità più importante di tale riorganizzazione riguarda la sospensione dell'accordo di collaborazione con Rivian che doveva sfociare in una joint venture per arrivare a produrre insieme furgoni elettrici in uno stabilimento nell'Europa centro-orientale.
-
-
-                            </p>
-                        </div>
-                    </div> 
-                    </div>
-                    </article>
-
-                    <!-- mettere almeno due pubblicità quadrate-->
-
-                    <aside class="centergrid">
-                        <div class="first">
-                            <!-- GRID con tre elementi-->
-                            <h1>Team collaboration done right</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                                maximus euismod dapibus. Aliquam erat volutpat. Nam sed
-                                rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac,
-                                fermentum non leo. Morbi lacinia dui ut lacinia hendrerit. Ut
-                                rutrum odio id mauris laoreet condimentum. Nullam leo purus,
-                                interdum vel accumsan at, egestas ac tortor.
-                            </p>
-                        </div>
-
-                        <div class="second">
-                            <h1>Team collaboration done right</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                                maximus euismod dapibus. Aliquam erat volutpat. Nam sed
-                                rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac,
-                                fermentum non leo. Morbi lacinia dui ut lacinia hendrerit. Ut
-                                rutrum odio id mauris laoreet condimentum. Nullam leo purus,
-                                interdum vel accumsan at, egestas ac tortor.
-                            </p>
-                        </div>
-
-                        <div class="third">
-                            <h1>Team collaboration done right</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                                maximus euismod dapibus. Aliquam erat volutpat. Nam sed
-                                rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac,
-                                fermentum non leo. Morbi lacinia dui ut lacinia hendrerit. Ut
-                                rutrum odio id mauris laoreet condimentum. Nullam leo purus,
-                                interdum vel accumsan at, egestas ac tortor.
-                            </p>
-                        </div>
-                    </aside>
-
-                    <article>
-                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image" />
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                         <div class="article-body">
                             <h4>Lorem ipsum</h4>
                             <p>
-                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
-                                eget laoreet. Orci varius natoque penatibus et magnis dis
-                                parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
                                 lorem.
                             </p>
                         </div>
                     </article>
+
                     <article>
-                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image" />
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                         <div class="article-body">
                             <h4>Lorem ipsum</h4>
                             <p>
-                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
-                                eget laoreet. Orci varius natoque penatibus et magnis dis
-                                parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
                                 lorem.
                             </p>
                         </div>
                     </article>
+                </div>
+                <div class="articles">
                     <article>
-                        <img src="https://via.placeholder.com/600x250" alt="img1" class="media-image" />
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                         <div class="article-body">
-                            <h4>Lorem ipsum</h4>
+                            <h4>Lorem sfsdf</h4>
                             <p>
-                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
-                                eget laoreet. Orci varius natoque penatibus et magnis dis
-                                parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibu Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci
+                                varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.s et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsdfdsfsd sfsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci
+                                varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
                                 lorem.
                             </p>
                         </div>
                     </article>
                 </div>
             </section>
+
+            <!-- mettere almeno due pubblicità quadrate-->
+
+            <aside class="centergrid">
+                <div class="first">
+                    <h3>Team collaboration done right</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                        maximus euismod dapibus. Aliquam erat volutpat. Nam sed
+                        rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac,
+                        fermentum non leo. Morbi lacinia dui ut lacinia hendrerit. Ut
+                        rutrum odio id mauris laoreet condimentum. Nullam leo purus,
+                        interdum vel accumsan at, egestas ac tortor.
+                    </p>
+                </div>
+
+                <div class="second">
+                    <h3>Team collaboration done right</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                        maximus euismod dapibus. Aliquam erat volutpat. Nam sed
+                        rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac,
+                        fermentum non leo. Morbi lacinia dui ut lacinia hendrerit. Ut
+                        rutrum odio id mauris laoreet condimentum. Nullam leo purus,
+                        interdum vel accumsan at, egestas ac tortor.
+                    </p>
+                </div>
+
+                <div class="third">
+                    <h3>Team collaboration done right</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                        maximus euismod dapibus. Aliquam erat volutpat. Nam sed
+                        rhoncus diam. Vestibulum nisl leo, dignissim non placerat ac,
+                        fermentum non leo. Morbi lacinia dui ut lacinia hendrerit. Ut
+                        rutrum odio id mauris laoreet condimentum. Nullam leo purus,
+                        interdum vel accumsan at, egestas ac tortor.
+                    </p>
+                </div>
+            </aside>
+
+            <section>
+                <div class="articles">
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem sfsdf</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque
+                                penatibu Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci
+                                varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.s et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4>Lorem ipsdfdsfsd sfsum</h4>
+                            <p>
+                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                natoque Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci
+                                varius
+                                natoque
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                lorem.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
         </main>
         <footer>
             <nav>
-                <ul class="header-nav">
-                    <li><a href="/">Copyright 2022</a></li>
+                <ul class="footer-nav">
                     <li><a href="/features">Termini e condizioni</a></li>
                     <li><a href="/pricing">Privacy Policy</a></li>
-                    <li><a href="/about">Informazioni legali</a></li>
                 </ul>
+
+                <div class="social">
+                    <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluency/512/instagram-new.png"
+                            width="40px" alt="instagram" /></a>
+                    <a href="https://www.facebook.com/"><img src="https://img.icons8.com/color/512/facebook.png"
+                            width="40px" alt="fb" /></a>
+                    <a href="https://www.twitter.com/"><img src="https://img.icons8.com/color/512/twitter-squared.png"
+                            width="40px" alt="twitter" /></a>
+                </div>
+
+                <p> Copyright 2022 © RCS Mediagroup S.p.a. Tutti i diritti sono riservati | Per la pubblicità :
+                    CAIRORCS MEDIA SpA - Direzione Pubblicità
+                    RCS MediaGroup S.p.A. - Divisione Quotidiani Sede legale: via Angelo Rizzoli, 8 - 20132 Milano |
+                    Capitale sociale: Euro 270.000.000,00
+                    Codice Fiscale, Partita I.V.A. e Iscrizione al Registro delle Imprese di Milano n.12086540155 |
+                    R.E.A. di Milano: 1524326 | ISSN 2499-0485</p>
             </nav>
         </footer>
-    </div>
+    </main>
 </body>
 
 </html>
