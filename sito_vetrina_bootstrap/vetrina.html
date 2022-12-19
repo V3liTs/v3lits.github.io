@@ -11,252 +11,285 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container">        
+            <div class="px-2 text-center">
+                <nav class="navbar navbar-expand  bg-primary bg-gradient" aria-label="Second navbar example">
+                    <div class="container-fluid">
+                      <a class="navbar-brand fs-3 text-light" href="#">Il Corriere del Developer</a>
+                      <img class="float-end" src="assets/news.png" width="50px" alt="news" /></img>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                
+                      <div class="collapse navbar-collapse" id="navbarsExample02">
+                            <ul class="navbar-nav me-auto p-3">
+                            <li class="nav-item ">
+                                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            </li>
+                                <a class="nav-link active text-light" aria-current="page" href="#">Guide</a>
+                            </li>
+                                <a class="nav-link active text-light" aria-current="page" href="#">Recenzioni</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Link</a>
+                            </li>
+                            </ul>
+                        </div>
+                            
+                                <div class="me-auto p-2">
+                                <img src="assets/sear.png" width="25px" alt="news" /></img>
+                                </div>
+                                <div class="col-sm-2">
+                                <form>
+                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                                </form>
+                                </div>
+                        
+                    </div>
+                  </nav>
+       
+                  <main>
+                    <section>
+                        <div class="articles">
+                            <article>
+                                <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png"
+                                    alt="img1" class="media-image" />
+                                <div class="article-body">
+                                    <h4>Angular 16 per migliorare il rendering lato server</h4>
+                                    <p>
+                                        Provvisoriamente previsto per maggio 2023, Angular 16
+                                        esplorerà l'idratazione e i miglioramenti dell'usabilità del
+                                        rendering lato server, con un primo passo costituito
+                                        dall'idratazione non distruttiva. Questa tecnica consentirebbe
+                                        il riutilizzo del DOM lato server e, anziché eseguire
+                                        nuovamente il rendering, collegherebbe solo listener di eventi
+                                        e creerebbe strutture di dati necessarie al runtime di
+                                        Angular.
+                                    </p>
+                                </div>
+                            </article>
         
-            <div class="px-2 py-2 my-2 text-center">
-                <h1 class="display-3 fw-bold">Il corriere del developer</h1>
-                <div class="col-lg-6 mx-auto">
-                  <p class="lead mb-4">Tutte le notizie sul mondo di Bootstrap</p>
+                            <article>
+                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/microsoft-dot-net-icon.png"
+                                    alt="img1" class="media-image" />
+                                <div class="article-body">
+                                    <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
+                                    <p>
+                                        .NET Core 3.1 di Microsoft, una versione del framework di
+                                        sviluppo software multipiattaforma open source di Microsoft
+                                        pubblicato a dicembre 2019, non sarà più supportato a partire
+                                        dal 13 dicembre 2022. .NET Core 3.1 raggiunge lo stato di fine
+                                        supporto quel giorno, con Microsoft che interrompe la
+                                        manutenzione degli aggiornamenti e del supporto tecnico, ha
+                                        affermato la società.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="articles">
+                            <article>
+                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="img1"
+                                    class="media-image" />
+                                <div class="article-body">
+                                    <h4>TypeScript compie 10 anni</h4>
+                                    <p>
+                                        Dopo essere stato inizialmente accolto con scetticismo, il
+                                        linguaggio di programmazione TypeScript di Microsoft, che ha
+                                        portato i tipi statici nello sviluppo di JavaScript, ha
+                                        resistito alla prova del tempo, ha scritto un funzionario
+                                        Microsoft lo scorso fine settimana.
+                                    </p>
+                                </div>
+                            </article>
+        
+                            <article>
+                                <img src="https://www.marketplace.org/wp-content/uploads/2020/08/Windows_Internet_Explorer_Logo.png?fit=602%2C602"
+                                    alt="img1" class="media-image" />
+                                <div class="article-body">
+                                    <h4>Internet Explorer raggiunge la fine della linea</h4>
+                                    <p>
+                                        Il browser Web Internet Explorer legacy di Microsoft, che ha
+                                        navigato su Internet per quasi 27 anni , è stato ufficialmente
+                                        ritirato dal 15 giugno. La versione 11 del browser non è più
+                                        supportata, ha annunciato Microsoft. Nei prossimi mesi,
+                                        l'apertura di Internet Explorer reindirizzerà progressivamente
+                                        gli utenti al nuovo browser Microsoft Edge.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+        
+                    <!-- mettere almeno due pubblicità quadrate-->
+        
+                    <div class="conteinerimg">
+                        <div class="banner1">
+                            <a href="http://www.financesolutions.it/">
+                                <img src="https://via.placeholder.com/970x90" width="970" height="90" alt="img1"
+                                    class="media-ban" /></a>
+                        </div>
+                    </div>
+                    <aside class="centergrid">
+                        <div class="first">
+                            <a href="sito_responsive_singolo_articolo.html">
+                                <h3>
+                                    Ue, scontro sui migranti. Meloni: "Serve un segnale politico"
+                                </h3>
+                            </a>
+                            <img class="immagineprova" src="https://via.placeholder.com/100" alt="stranieri" />
+                            <p>
+                                A Giorgia Meloni non hanno tremato le gambe al suo debutto al
+                                Consiglio dell'Unione europea e il suo intervento è stato fermo e
+                                deciso. Il presidente del Consiglio ha spaziato dai migranti
+                                all'energia, sottolineando il ruolo fondamentale che giocano nello
+                                scacchiere europeo i Paesi del sud. Il tema dei migranti resta in
+                                agenda al termine di questo Consiglio, come ha dichiarato il
+                                presidente del Consiglio europeo, Charles Michel.
+                            </p>
+                        </div>
+        
+                        <div class="second">
+                            <a href="sito_responsive_singolo_articolo.html">
+                                <h3>
+                                    Covid, svolta per i positivi: liberi anche con la febbre (e il
+                                    tampone non servirà)
+                                </h3>
+                            </a>
+                            <img class="immagineprova" src="https://via.placeholder.com/100" alt="vaccino" />
+                            <p>
+                                Niente più limitazioni. Il Covid non fa più paura. Si chiude (si
+                                spera definitivamente) l'era del green pass e dei controlli.
+                                L'isolamento dei positivi, che oggi dura cinque giorni, si
+                                concluderà senza bisogno di tampone finale. A ufficializzare la
+                                decisione, già annunciata più volte dal ministro della Salute
+                                Orazio Schillaci, è un emendamento contenuto nel decreto Rave
+                                approvato dal Senato.
+                            </p>
+                        </div>
+                        <div class="third">
+                            <a href="sito_responsive_singolo_articolo.html">
+                                <h3>
+                                    Clamoroso Marocco, reclamo ufficiale contro la Francia! “Theo su
+                                    Boufal era da VAR!”
+                                </h3>
+                            </a>
+                            <img class="immagineprova" src="https://via.placeholder.com/120" alt="coppa" />
+                            <p>
+                                Dopo una calvacata straordinaria, il cammino del Marocco al
+                                Mondiale di Qatar si è fermato in semifinale contro la Francia.
+                                Sconfitta che i Leoni dell'Atlante faticano a digerire con due
+                                episodi nella gara, terminata per 2-0 a favore dei ragazzi di
+                                Deschamps, che la formazione di Regragui non ha gradito. Dito
+                                puntato contro la direzione di gara del messicano Cesar Ramos.
+                            </p>
+                        </div>
+        
+                    </aside>
+        
+                    <section>
+                        <div class="articles">
+                            <article>
+                                <img src="https://via.placeholder.com/200" alt="banner" class="media-image" />
+                                <div class="article-body">
+                                    <h4>Mozilla svela la visione per l'evoluzione del web</h4>
+                                    <p>
+                                        Predicando il mantra che "il web è per tutti", Mozilla ha pubblicato una visione per
+                                        l'evoluzione del web che sottolinea l'apertura e la sicurezza, con l'azienda che mira a
+                                        colmare le carenze in aree tra cui privacy e complessità.
+        
+                                        Il documento di visione copre ciò che Mozilla vorrebbe vedere accadere e delinea il
+                                        lavoro necessario per raggiungere questi obiettivi. Pur affermando che il Web è
+                                        diventato la piattaforma di comunicazione più importante del mondo, il CTO di FireFox di
+                                        Mozilla Eric Rescoria e il Distinguished Engineer Bobby Holley hanno scritto che il Web
+                                        ha problemi reali, con persone spiate, prive di potere e gravate da esperienze lente ed
+                                        eccessivamente complesse.
+                                    </p>
+                                </div>
+                            </article>
+        
+                            <article>
+                                <img src="https://via.placeholder.com/300" width: 150px; height:150px; alt="img1"
+                                    class="media-image" />
+                                <div class="article-body">
+                                    <h4>Lorem ipsdfdsfsd sfsum</h4>
+                                    <p>
+                                        Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
+                                        eget laoreet. Orci varius natoque Sed mattis vitae nisl quis
+                                        aliquet. Aliquam posuere et erat eget laoreet. Orci varius
+                                        natoque penatibus et magnis dis parturient montes, nascetur
+                                        ridiculus mus. Morbi nec varius lorem. penatibus et magnis dis
+                                        parturient montes, nascetur ridiculus mus. Morbi nec varius
+                                        lorem.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+        
+                    <div class="conteinerimg">
+                        <div class="banner1">
+                            <a href="http://www.financesolutions.it/">
+                                <img src="https://via.placeholder.com/970x90" width="970" height="90" alt="img1"
+                                    class="media-ban" /></a>
+                        </div>
+                    </div>
+                </main>
+<!-- Footer Finito -->
+    <footer class="bg-primary bg-gradient border-top text-center text-white">
+        <div class="container-fluid">
+            <div class="row px-3 py-3"> 
+                <div class="col-12 col-lg-4 text-light">
+                    <div class="footer p-4">
+                        <img class="float-end" src="assets/news.png"
+                                width="50px" alt="news" /></img>
+                        <p class="fs-3">Il Corriere del Developer</p>
+                        
+                    </div>
+                    <div class="col-auto">
+                    <div class="social">
+                        <a href="https://www.instagram.com/"><img src="assets/insta.png"
+                                width="40px" alt="instagram" /></a>
+                        <a href="https://www.facebook.com/"><img src="assets/face.png"
+                                width="40px" alt="fb" /></a>
+                        <a href="https://www.twitter.com/"><img src="assets/twitter.png"
+                                width="40px" alt="rss" /></a>
+                                <a href="#"><img src="assets/rss.png"
+                                    width="40px" alt="twitter" /></a>
+                    </div>
+                    
+                </div>
+            
+            </div>
+                <div class="col-12 col-lg-8 p-3">
+                    <span class="footer">
+                        <p>
+                         Il Corriere del Developer è stata la principale rivista per aspiranti creativi online e professionisti del settore. Ha offerto progetti pratici all'avanguardia che abbracciano HTML, CSS, Bootstrap e WordPress, oltre a funzionalità di hosting e interviste con le persone più influenti della comunità web.
+                        </p>
+                    </span>
+                    <ul class="list-inline footer__menu text-center text-lg-left pb-3">
+                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/cookie-policy/"><u>Informativa sui cookie</u></a></li>
+                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/normativa-privacy/"><u>Privacy Policy</u></a></li>
+                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/termini-e-condizioni/"><u>Termini e condizioni</u></a></li>
+                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/contatti/"><u>Contatti</u></a></li>
+                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="#"><u>Lavora con noi</u></a></li>
+                        
+                          <li class="list-inline-item mt-2 mt-lg-0">
+                            <a href="#" class="iubenda-advertising-preferences-link d-inline-block text-white"><u>Aggiorna le impostazioni di tracciamento della pubblicità</u></a>
+                          </li>
+                        
+                      </ul>
                 </div>
               </div>
-              <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Always expand</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-            
-                  <div class="collapse navbar-collapse" id="navbarsExample02">
-                    <ul class="navbar-nav me-auto">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                    </ul>
-                    <form>
-                      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    </form>
-                  </div>
-                </div>
-              </nav>
-       
-        <main>
-            <section>
-                <div class="articles">
-                    <article>
-                        <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png"
-                            alt="img1" class="media-image" />
-                        <div class="article-body">
-                            <h4>Angular 16 per migliorare il rendering lato server</h4>
-                            <p>
-                                Provvisoriamente previsto per maggio 2023, Angular 16
-                                esplorerà l'idratazione e i miglioramenti dell'usabilità del
-                                rendering lato server, con un primo passo costituito
-                                dall'idratazione non distruttiva. Questa tecnica consentirebbe
-                                il riutilizzo del DOM lato server e, anziché eseguire
-                                nuovamente il rendering, collegherebbe solo listener di eventi
-                                e creerebbe strutture di dati necessarie al runtime di
-                                Angular.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article>
-                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/microsoft-dot-net-icon.png"
-                            alt="img1" class="media-image" />
-                        <div class="article-body">
-                            <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
-                            <p>
-                                .NET Core 3.1 di Microsoft, una versione del framework di
-                                sviluppo software multipiattaforma open source di Microsoft
-                                pubblicato a dicembre 2019, non sarà più supportato a partire
-                                dal 13 dicembre 2022. .NET Core 3.1 raggiunge lo stato di fine
-                                supporto quel giorno, con Microsoft che interrompe la
-                                manutenzione degli aggiornamenti e del supporto tecnico, ha
-                                affermato la società.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-                <div class="articles">
-                    <article>
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="img1"
-                            class="media-image" />
-                        <div class="article-body">
-                            <h4>TypeScript compie 10 anni</h4>
-                            <p>
-                                Dopo essere stato inizialmente accolto con scetticismo, il
-                                linguaggio di programmazione TypeScript di Microsoft, che ha
-                                portato i tipi statici nello sviluppo di JavaScript, ha
-                                resistito alla prova del tempo, ha scritto un funzionario
-                                Microsoft lo scorso fine settimana.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article>
-                        <img src="https://www.marketplace.org/wp-content/uploads/2020/08/Windows_Internet_Explorer_Logo.png?fit=602%2C602"
-                            alt="img1" class="media-image" />
-                        <div class="article-body">
-                            <h4>Internet Explorer raggiunge la fine della linea</h4>
-                            <p>
-                                Il browser Web Internet Explorer legacy di Microsoft, che ha
-                                navigato su Internet per quasi 27 anni , è stato ufficialmente
-                                ritirato dal 15 giugno. La versione 11 del browser non è più
-                                supportata, ha annunciato Microsoft. Nei prossimi mesi,
-                                l'apertura di Internet Explorer reindirizzerà progressivamente
-                                gli utenti al nuovo browser Microsoft Edge.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- mettere almeno due pubblicità quadrate-->
-
-            <div class="conteinerimg">
-                <div class="banner1">
-                    <a href="http://www.financesolutions.it/">
-                        <img src="https://via.placeholder.com/970x90" width="970" height="90" alt="img1"
-                            class="media-ban" /></a>
-                </div>
-            </div>
-            <aside class="centergrid">
-                <div class="first">
-                    <a href="sito_responsive_singolo_articolo.html">
-                        <h3>
-                            Ue, scontro sui migranti. Meloni: "Serve un segnale politico"
-                        </h3>
-                    </a>
-                    <img class="immagineprova" src="https://via.placeholder.com/100" alt="stranieri" />
-                    <p>
-                        A Giorgia Meloni non hanno tremato le gambe al suo debutto al
-                        Consiglio dell'Unione europea e il suo intervento è stato fermo e
-                        deciso. Il presidente del Consiglio ha spaziato dai migranti
-                        all'energia, sottolineando il ruolo fondamentale che giocano nello
-                        scacchiere europeo i Paesi del sud. Il tema dei migranti resta in
-                        agenda al termine di questo Consiglio, come ha dichiarato il
-                        presidente del Consiglio europeo, Charles Michel.
-                    </p>
-                </div>
-
-                <div class="second">
-                    <a href="sito_responsive_singolo_articolo.html">
-                        <h3>
-                            Covid, svolta per i positivi: liberi anche con la febbre (e il
-                            tampone non servirà)
-                        </h3>
-                    </a>
-                    <img class="immagineprova" src="https://via.placeholder.com/100" alt="vaccino" />
-                    <p>
-                        Niente più limitazioni. Il Covid non fa più paura. Si chiude (si
-                        spera definitivamente) l'era del green pass e dei controlli.
-                        L'isolamento dei positivi, che oggi dura cinque giorni, si
-                        concluderà senza bisogno di tampone finale. A ufficializzare la
-                        decisione, già annunciata più volte dal ministro della Salute
-                        Orazio Schillaci, è un emendamento contenuto nel decreto Rave
-                        approvato dal Senato.
-                    </p>
-                </div>
-                <div class="third">
-                    <a href="sito_responsive_singolo_articolo.html">
-                        <h3>
-                            Clamoroso Marocco, reclamo ufficiale contro la Francia! “Theo su
-                            Boufal era da VAR!”
-                        </h3>
-                    </a>
-                    <img class="immagineprova" src="https://via.placeholder.com/120" alt="coppa" />
-                    <p>
-                        Dopo una calvacata straordinaria, il cammino del Marocco al
-                        Mondiale di Qatar si è fermato in semifinale contro la Francia.
-                        Sconfitta che i Leoni dell'Atlante faticano a digerire con due
-                        episodi nella gara, terminata per 2-0 a favore dei ragazzi di
-                        Deschamps, che la formazione di Regragui non ha gradito. Dito
-                        puntato contro la direzione di gara del messicano Cesar Ramos.
-                    </p>
-                </div>
-
-            </aside>
-
-            <section>
-                <div class="articles">
-                    <article>
-                        <img src="https://via.placeholder.com/200" alt="banner" class="media-image" />
-                        <div class="article-body">
-                            <h4>Mozilla svela la visione per l'evoluzione del web</h4>
-                            <p>
-                                Predicando il mantra che "il web è per tutti", Mozilla ha pubblicato una visione per
-                                l'evoluzione del web che sottolinea l'apertura e la sicurezza, con l'azienda che mira a
-                                colmare le carenze in aree tra cui privacy e complessità.
-
-                                Il documento di visione copre ciò che Mozilla vorrebbe vedere accadere e delinea il
-                                lavoro necessario per raggiungere questi obiettivi. Pur affermando che il Web è
-                                diventato la piattaforma di comunicazione più importante del mondo, il CTO di FireFox di
-                                Mozilla Eric Rescoria e il Distinguished Engineer Bobby Holley hanno scritto che il Web
-                                ha problemi reali, con persone spiate, prive di potere e gravate da esperienze lente ed
-                                eccessivamente complesse.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article>
-                        <img src="https://via.placeholder.com/300" width: 150px; height:150px; alt="img1"
-                            class="media-image" />
-                        <div class="article-body">
-                            <h4>Lorem ipsdfdsfsd sfsum</h4>
-                            <p>
-                                Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
-                                eget laoreet. Orci varius natoque Sed mattis vitae nisl quis
-                                aliquet. Aliquam posuere et erat eget laoreet. Orci varius
-                                natoque penatibus et magnis dis parturient montes, nascetur
-                                ridiculus mus. Morbi nec varius lorem. penatibus et magnis dis
-                                parturient montes, nascetur ridiculus mus. Morbi nec varius
-                                lorem.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <div class="conteinerimg">
-                <div class="banner1">
-                    <a href="http://www.financesolutions.it/">
-                        <img src="https://via.placeholder.com/970x90" width="970" height="90" alt="img1"
-                            class="media-ban" /></a>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <nav>
-                <ul class="footer-nav">
-                    <li><a href="/features">Termini e condizioni</a></li>
-                    <li><a href="/pricing">Privacy Policy</a></li>
-                </ul>
-
-                <div class="social">
-                    <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluency/512/instagram-new.png"
-                            width="40px" alt="instagram" /></a>
-                    <a href="https://www.facebook.com/"><img src="https://img.icons8.com/color/512/facebook.png"
-                            width="40px" alt="fb" /></a>
-                    <a href="https://www.twitter.com/"><img src="https://img.icons8.com/color/512/twitter-squared.png"
-                            width="40px" alt="twitter" /></a>
-                </div>
-
-                <p> Copyright 2022 © RCS Mediagroup S.p.a. Tutti i diritti sono riservati | Per la pubblicità :
-                    CAIRORCS MEDIA SpA - Direzione Pubblicità
-                    RCS MediaGroup S.p.A. - Divisione Quotidiani Sede legale: via Angelo Rizzoli, 8 - 20132 Milano |
-                    Capitale sociale: Euro 270.000.000,00
-                    Codice Fiscale, Partita I.V.A. e Iscrizione al Registro delle Imprese di Milano n.12086540155 |
-                    R.E.A. di Milano: 1524326 | ISSN 2499-0485</p>
-            </nav>
-        </footer>
+        </div>
+        <hr class="my-0" />
+          <div
+          class="text-center p-3 "
+          style="background-color: rgba(0, 0, 0, 0.2)">
+       © 2022 Copyright:
+       <a class="text-white" href="#">Il corriere del developer </a>
+           
+    </footer>
     </div>
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 </body>
