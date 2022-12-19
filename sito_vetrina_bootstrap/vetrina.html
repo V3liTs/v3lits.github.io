@@ -7,291 +7,410 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il corriere del developer</title>
     <link rel="stylesheet" href="../lezione12/css/mybootlocal.css" />
-    <link rel="stylesheet" href="/css/mystyle.css"/>
 </head>
 
 <body>
-    <div class="container">        
-            <div class="px-2 text-center">
-                <nav class="navbar navbar-expand  bg-primary bg-gradient" aria-label="Second navbar example">
-                    <div class="container-fluid">
-                      <a class="navbar-brand fs-3 text-light" href="#">Il Corriere del Developer</a>
-                      <img class="float-end" src="assets/news.png" width="50px" alt="news" /></img>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                
-                      <div class="collapse navbar-collapse" id="navbarsExample02">
-                            <ul class="navbar-nav me-auto p-3">
-                            <li class="nav-item ">
-                                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                            </li>
-                                <a class="nav-link active text-light" aria-current="page" href="#">Guide</a>
-                            </li>
-                                <a class="nav-link active text-light" aria-current="page" href="#">Recenzioni</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Link</a>
-                            </li>
-                            </ul>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Mediamodifier-Design.svg" alt="Corriere del developer" width="30" height="30">
+                </a>
+                <a class="navbar-brand fw-bold" href="#">Corriere del developer</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Articoli</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chi siamo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Iscrivti</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
+                            <button class="btn btn-outline-success" type="submit">Cerca</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="row justify-content-start">
+                <div class="col-8">
+                    <!-- main title -->
+                    <div class="card border-0 mb-2">
+                        <div class="card-body">
+                            <h1 class="display-2 fw-bold">L'Argentina vince i mondiali</h1>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
-                            
-                                <div class="me-auto p-2">
-                                <img src="assets/sear.png" width="25px" alt="news" /></img>
-                                </div>
-                                <div class="col-sm-2">
-                                <form>
-                                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                                </form>
-                                </div>
-                        
+                        <img src="assets/messi.jpg" class="card-img-bottom" alt="...">
                     </div>
-                  </nav>
-       
-                  <main>
-                    <section>
-                        <div class="articles">
-                            <article>
-                                <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/21_Angular-512.png"
-                                    alt="img1" class="media-image" />
-                                <div class="article-body">
-                                    <h4>Angular 16 per migliorare il rendering lato server</h4>
-                                    <p>
-                                        Provvisoriamente previsto per maggio 2023, Angular 16
-                                        esplorerà l'idratazione e i miglioramenti dell'usabilità del
-                                        rendering lato server, con un primo passo costituito
-                                        dall'idratazione non distruttiva. Questa tecnica consentirebbe
-                                        il riutilizzo del DOM lato server e, anziché eseguire
-                                        nuovamente il rendering, collegherebbe solo listener di eventi
-                                        e creerebbe strutture di dati necessarie al runtime di
-                                        Angular.
-                                    </p>
-                                </div>
-                            </article>
-        
-                            <article>
-                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/microsoft-dot-net-icon.png"
-                                    alt="img1" class="media-image" />
-                                <div class="article-body">
-                                    <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
-                                    <p>
-                                        .NET Core 3.1 di Microsoft, una versione del framework di
-                                        sviluppo software multipiattaforma open source di Microsoft
-                                        pubblicato a dicembre 2019, non sarà più supportato a partire
-                                        dal 13 dicembre 2022. .NET Core 3.1 raggiunge lo stato di fine
-                                        supporto quel giorno, con Microsoft che interrompe la
-                                        manutenzione degli aggiornamenti e del supporto tecnico, ha
-                                        affermato la società.
-                                    </p>
-                                </div>
-                            </article>
+                    <!-- second article -->
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="flex-grow-1 ms-3">
+                            <h1 class="display-6 fw-bold">Titolo principale del giornale</h1>
+                            This is some content from a media component. You can replace this with any content and adjust it as
+                            needed. This is some content from a media component. You can replace this with any content and
+                            adjust it as needed.This is some content from a media component. You can replace this with any
+                            content and adjust it as needed.This is some content from a media component. You can replace this
+                            with any content and adjust it as needed.This is some content from a media component. You can
+                            replace this with any content and adjust it as needed.
+                            <div>
+                                <p>Serie di link | links | links</p>
+                            </div>
                         </div>
-                        <div class="articles">
-                            <article>
-                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="img1"
-                                    class="media-image" />
-                                <div class="article-body">
-                                    <h4>TypeScript compie 10 anni</h4>
-                                    <p>
-                                        Dopo essere stato inizialmente accolto con scetticismo, il
-                                        linguaggio di programmazione TypeScript di Microsoft, che ha
-                                        portato i tipi statici nello sviluppo di JavaScript, ha
-                                        resistito alla prova del tempo, ha scritto un funzionario
-                                        Microsoft lo scorso fine settimana.
-                                    </p>
-                                </div>
-                            </article>
-        
-                            <article>
-                                <img src="https://www.marketplace.org/wp-content/uploads/2020/08/Windows_Internet_Explorer_Logo.png?fit=602%2C602"
-                                    alt="img1" class="media-image" />
-                                <div class="article-body">
-                                    <h4>Internet Explorer raggiunge la fine della linea</h4>
-                                    <p>
-                                        Il browser Web Internet Explorer legacy di Microsoft, che ha
-                                        navigato su Internet per quasi 27 anni , è stato ufficialmente
-                                        ritirato dal 15 giugno. La versione 11 del browser non è più
-                                        supportata, ha annunciato Microsoft. Nei prossimi mesi,
-                                        l'apertura di Internet Explorer reindirizzerà progressivamente
-                                        gli utenti al nuovo browser Microsoft Edge.
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-        
-                    <!-- mettere almeno due pubblicità quadrate-->
-        
-                    <div class="conteinerimg">
-                        <div class="banner1">
-                            <a href="http://www.financesolutions.it/">
-                                <img src="https://via.placeholder.com/970x90" width="970" height="90" alt="img1"
-                                    class="media-ban" /></a>
+                        <div class="flex-shrink-0">
+                            <img src="assets/juve.jpg" alt="immagine" width="250px">
                         </div>
                     </div>
-                    <aside class="centergrid">
-                        <div class="first">
-                            <a href="sito_responsive_singolo_articolo.html">
-                                <h3>
-                                    Ue, scontro sui migranti. Meloni: "Serve un segnale politico"
-                                </h3>
-                            </a>
-                            <img class="immagineprova" src="https://via.placeholder.com/100" alt="stranieri" />
-                            <p>
-                                A Giorgia Meloni non hanno tremato le gambe al suo debutto al
-                                Consiglio dell'Unione europea e il suo intervento è stato fermo e
-                                deciso. Il presidente del Consiglio ha spaziato dai migranti
-                                all'energia, sottolineando il ruolo fondamentale che giocano nello
-                                scacchiere europeo i Paesi del sud. Il tema dei migranti resta in
-                                agenda al termine di questo Consiglio, come ha dichiarato il
-                                presidente del Consiglio europeo, Charles Michel.
-                            </p>
-                        </div>
-        
-                        <div class="second">
-                            <a href="sito_responsive_singolo_articolo.html">
-                                <h3>
-                                    Covid, svolta per i positivi: liberi anche con la febbre (e il
-                                    tampone non servirà)
-                                </h3>
-                            </a>
-                            <img class="immagineprova" src="https://via.placeholder.com/100" alt="vaccino" />
-                            <p>
-                                Niente più limitazioni. Il Covid non fa più paura. Si chiude (si
-                                spera definitivamente) l'era del green pass e dei controlli.
-                                L'isolamento dei positivi, che oggi dura cinque giorni, si
-                                concluderà senza bisogno di tampone finale. A ufficializzare la
-                                decisione, già annunciata più volte dal ministro della Salute
-                                Orazio Schillaci, è un emendamento contenuto nel decreto Rave
-                                approvato dal Senato.
-                            </p>
-                        </div>
-                        <div class="third">
-                            <a href="sito_responsive_singolo_articolo.html">
-                                <h3>
-                                    Clamoroso Marocco, reclamo ufficiale contro la Francia! “Theo su
-                                    Boufal era da VAR!”
-                                </h3>
-                            </a>
-                            <img class="immagineprova" src="https://via.placeholder.com/120" alt="coppa" />
-                            <p>
-                                Dopo una calvacata straordinaria, il cammino del Marocco al
-                                Mondiale di Qatar si è fermato in semifinale contro la Francia.
-                                Sconfitta che i Leoni dell'Atlante faticano a digerire con due
-                                episodi nella gara, terminata per 2-0 a favore dei ragazzi di
-                                Deschamps, che la formazione di Regragui non ha gradito. Dito
-                                puntato contro la direzione di gara del messicano Cesar Ramos.
-                            </p>
-                        </div>
-        
-                    </aside>
-        
-                    <section>
-                        <div class="articles">
-                            <article>
-                                <img src="https://via.placeholder.com/200" alt="banner" class="media-image" />
-                                <div class="article-body">
-                                    <h4>Mozilla svela la visione per l'evoluzione del web</h4>
-                                    <p>
-                                        Predicando il mantra che "il web è per tutti", Mozilla ha pubblicato una visione per
-                                        l'evoluzione del web che sottolinea l'apertura e la sicurezza, con l'azienda che mira a
-                                        colmare le carenze in aree tra cui privacy e complessità.
-        
-                                        Il documento di visione copre ciò che Mozilla vorrebbe vedere accadere e delinea il
-                                        lavoro necessario per raggiungere questi obiettivi. Pur affermando che il Web è
-                                        diventato la piattaforma di comunicazione più importante del mondo, il CTO di FireFox di
-                                        Mozilla Eric Rescoria e il Distinguished Engineer Bobby Holley hanno scritto che il Web
-                                        ha problemi reali, con persone spiate, prive di potere e gravate da esperienze lente ed
-                                        eccessivamente complesse.
-                                    </p>
-                                </div>
-                            </article>
-        
-                            <article>
-                                <img src="https://via.placeholder.com/300" width: 150px; height:150px; alt="img1"
-                                    class="media-image" />
-                                <div class="article-body">
-                                    <h4>Lorem ipsdfdsfsd sfsum</h4>
-                                    <p>
-                                        Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat
-                                        eget laoreet. Orci varius natoque Sed mattis vitae nisl quis
-                                        aliquet. Aliquam posuere et erat eget laoreet. Orci varius
-                                        natoque penatibus et magnis dis parturient montes, nascetur
-                                        ridiculus mus. Morbi nec varius lorem. penatibus et magnis dis
-                                        parturient montes, nascetur ridiculus mus. Morbi nec varius
-                                        lorem.
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-        
-                    <div class="conteinerimg">
-                        <div class="banner1">
-                            <a href="http://www.financesolutions.it/">
-                                <img src="https://via.placeholder.com/970x90" width="970" height="90" alt="img1"
-                                    class="media-ban" /></a>
-                        </div>
-                    </div>
-                </main>
-<!-- Footer Finito -->
-    <footer class="bg-primary bg-gradient border-top text-center text-white">
-        <div class="container-fluid">
-            <div class="row px-3 py-3"> 
-                <div class="col-12 col-lg-4 text-light">
-                    <div class="footer p-4">
-                        <img class="float-end" src="assets/news.png"
-                                width="50px" alt="news" /></img>
-                        <p class="fs-3">Il Corriere del Developer</p>
-                        
-                    </div>
-                    <div class="col-auto">
-                    <div class="social">
-                        <a href="https://www.instagram.com/"><img src="assets/insta.png"
-                                width="40px" alt="instagram" /></a>
-                        <a href="https://www.facebook.com/"><img src="assets/face.png"
-                                width="40px" alt="fb" /></a>
-                        <a href="https://www.twitter.com/"><img src="assets/twitter.png"
-                                width="40px" alt="rss" /></a>
-                                <a href="#"><img src="assets/rss.png"
-                                    width="40px" alt="twitter" /></a>
-                    </div>
+                    <hr class="border opacity-50">
+          
+                </div>
+                <!-- side bar-->
+                <div class="col-4 border-start">
+                    <img src="assets/dimaria.jpg" alt="immagine" width="100%"/>
+                    <h1 class="display-5 fw-bold">Di Maria stellare!
+                    </h1>
+                    <p>Predicando il mantra che "il web è per tutti", Mozilla ha
+                        pubblicato una visione per l'evoluzione del web che sottolinea
+                        l'apertura e la sicurezza, con l'azienda che mira a colmare le
+                        carenze in aree tra cui privacy e complessità. Il documento di
+                        visione copre ciò che Mozilla vorrebbe vedere accadere e
+                        delinea il lavoro necessario per raggiungere questi obiettivi.
+                        Pur affermando che il Web è diventato la piattaforma di
+                        comunicazione più importante del mondo, il CTO di FireFox di
+                        Mozilla Eric Rescoria e il Distinguished Engineer Bobby Holley
+                        hanno scritto che il Web ha problemi reali, con persone
+                        spiate, prive di potere e gravate da esperienze lente ed
+                        eccessivamente complesse.</p>
                     
                 </div>
-            
             </div>
-                <div class="col-12 col-lg-8 p-3">
-                    <span class="footer">
-                        <p>
-                         Il Corriere del Developer è stata la principale rivista per aspiranti creativi online e professionisti del settore. Ha offerto progetti pratici all'avanguardia che abbracciano HTML, CSS, Bootstrap e WordPress, oltre a funzionalità di hosting e interviste con le persone più influenti della comunità web.
-                        </p>
-                    </span>
-                    <ul class="list-inline footer__menu text-center text-lg-left pb-3">
-                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/cookie-policy/"><u>Informativa sui cookie</u></a></li>
-                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/normativa-privacy/"><u>Privacy Policy</u></a></li>
-                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/termini-e-condizioni/"><u>Termini e condizioni</u></a></li>
-                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="/contatti/"><u>Contatti</u></a></li>
-                        <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white" href="#"><u>Lavora con noi</u></a></li>
-                        
-                          <li class="list-inline-item mt-2 mt-lg-0">
-                            <a href="#" class="iubenda-advertising-preferences-link d-inline-block text-white"><u>Aggiorna le impostazioni di tracciamento della pubblicità</u></a>
-                          </li>
-                        
-                      </ul>
+        </section>
+
+        <main>
+
+
+            <!-- two artciles -->
+            <div class="row mb-3 text-justify">
+                <div class="col-6 themed-grid-col">
+                    <h4>Angular 16 per migliorare il rendering lato server</h4>
+                    <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                    Provvisoriamente previsto per maggio 2023, Angular 16 esplorerà
+                    l'idratazione e i miglioramenti dell'usabilità del rendering lato
+                    server, con un primo passo costituito dall'idratazione non
+                    distruttiva. Questa tecnica consentirebbe il riutilizzo del DOM
+                    lato server e, anziché eseguire nuovamente il rendering,
+                    collegherebbe solo listener di eventi e creerebbe strutture di
+                    dati necessarie al runtime di Angular.
                 </div>
-              </div>
-        </div>
-        <hr class="my-0" />
-          <div
-          class="text-center p-3 "
-          style="background-color: rgba(0, 0, 0, 0.2)">
-       © 2022 Copyright:
-       <a class="text-white" href="#">Il corriere del developer </a>
-           
-    </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+                <div class="col-6 themed-grid-col">
+                    <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
+                    <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                    .NET Core 3.1 di Microsoft, una versione del framework di sviluppo
+                    software multipiattaforma open source di Microsoft pubblicato a
+                    dicembre 2019, non sarà più supportato a partire dal 13 dicembre
+                    2022. .NET Core 3.1 raggiunge lo stato di fine supporto quel
+                    giorno, con Microsoft che interrompe la manutenzione degli
+                    aggiornamenti e del supporto tecnico, ha affermato la società.
+                </div>
+            </div>
+
+
+            <hr class="border opacity-50">
+            <!-- banner 1-->
+            <a href="https://www.quellocheconta.gov.it/it/">
+                <img src="https://www.quellocheconta.gov.it/export/sites/sitopef/modules/img/news/news100/Banner_Frame.jpg"
+                    alt="img1" class="media-ban" width="100%" /></a>
+
+            <hr class="border opacity-50">
+
+            <!-- two articles and a photo right -->
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <div class="row mb-3 text-justify">
+                        <div class="col-6 themed-grid-col">
+                            <h4>Angular 16 per migliorare il rendering lato server</h4>
+                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                            Provvisoriamente previsto per maggio 2023, Angular 16 esplorerà
+                            l'idratazione e i miglioramenti dell'usabilità del rendering lato
+                            server, con un primo passo costituito dall'idratazione non
+                            distruttiva. Questa tecnica consentirebbe il riutilizzo del DOM
+                            lato server e, anziché eseguire nuovamente il rendering,
+                            collegherebbe solo listener di eventi e creerebbe strutture di
+                            dati necessarie al runtime di Angular.
+                        </div>
+                        <div class="col-6 themed-grid-col">
+                            <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
+                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                            .NET Core 3.1 di Microsoft, una versione del framework di sviluppo
+                            software multipiattaforma open source di Microsoft pubblicato a
+                            dicembre 2019, non sarà più supportato a partire dal 13 dicembre
+                            2022. .NET Core 3.1 raggiunge lo stato di fine supporto quel
+                            giorno, con Microsoft che interrompe la manutenzione degli
+                            aggiornamenti e del supporto tecnico, ha affermato la società.
+                        </div>
+                    </div>
+                </div>
+                <div class="border-start">
+                    <figure class="ms-3">
+                        <img src="https:via.placeholder.com/400" alt="Elephant at sunset">
+                        <figcaption>An elephant at sunset</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <hr class="border opacity-50">
+
+            <!-- photo left and two articles -->
+            <div class="d-flex">
+                <div class="p-2 flex-fill"><img src="https:via.placeholder.com/600x300" alt="img1" />
+                    <p>server, con un primo passo costituito dall'idratazione non
+                        distruttiva. Questa tecnica consentirebbe il riutilizzo del DOM
+                        lato server e, anziché eseguire nuovamente il rendering,
+                        collegherebbe solo listener di eventi e creerebbe strutture di
+                        dati necessarie al runtime di Angular.</p>
+                </div>
+                <div class="p-2 flex-fill">
+                    <div class="row mb-3 text-justify">
+                        <div class="col-6 themed-grid-col">
+                            <h4>Angular 16 per migliorare il rendering lato server</h4>
+                            <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                            Provvisoriamente previsto per maggio 2023, Angular 16 esplorerà
+                            l'idratazione e i miglioramenti dell'usabilità del rendering lato
+                            server, con un primo passo costituito dall'idratazione non
+                            distruttiva. Questa tecnica consentirebbe il riutilizzo del DOM
+                            lato server e, anziché eseguire nuovamente il rendering,
+                            collegherebbe solo listener di eventi e creerebbe strutture di
+                            dati necessarie al runtime di Angular.
+                        </div>
+                        <div class="col-6 themed-grid-col">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border opacity-50">
+            <div class="row mb-3 text-justify">
+                <div class="col-md-8 themed-grid-col">
+                    <div class="row mb-3 text-justify">
+                        <div class="col-4 themed-grid-col">
+                            <div class="card">
+                                <img src="https:via.placeholder.com/200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 themed-grid-col">
+                            <div class="card">
+                                <img src="https:via.placeholder.com/200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 themed-grid-col">
+                            <div class="card">
+                                <img src="https:via.placeholder.com/200" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 themed-grid-col">
+                    <div class="card text-bg-dark">
+                        <img src="assets/messi.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border opacity-50">
+                <div class="row mb-3 text-justify">
+                    <div class="col-6 themed-grid-col">
+                        <h4>Angular 16 per migliorare il rendering lato server</h4>
+                        <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                        Provvisoriamente previsto per maggio 2023, Angular 16 esplorerà
+                        l'idratazione e i miglioramenti dell'usabilità del rendering lato
+                        server, con un primo passo costituito dall'idratazione non
+                        distruttiva. Questa tecnica consentirebbe il riutilizzo del DOM
+                        lato server e, anziché eseguire nuovamente il rendering,
+                        collegherebbe solo listener di eventi e creerebbe strutture di
+                        dati necessarie al runtime di Angular.
+                    </div>
+                    <div class="col-6 themed-grid-col">
+                        <h4>.NET Core 3.1 di Microsoft si avvicina alla fine</h4>
+                        <img src="https:via.placeholder.com/200" alt="img1" /><br>
+                        .NET Core 3.1 di Microsoft, una versione del framework di sviluppo
+                        software multipiattaforma open source di Microsoft pubblicato a
+                        dicembre 2019, non sarà più supportato a partire dal 13 dicembre
+                        2022. .NET Core 3.1 raggiunge lo stato di fine supporto quel
+                        giorno, con Microsoft che interrompe la manutenzione degli
+                        aggiornamenti e del supporto tecnico, ha affermato la società.
+                    </div>
+                </div>
+                <hr class="border opacity-50">
+
+                <!-- banner 2-->
+                <a href="https://www.quellocheconta.gov.it/it/">
+                    <img src="https://www.quellocheconta.gov.it/export/sites/sitopef/modules/img/news/news100/Banner_Frame.jpg"
+                        alt="img1" class="media-ban" width="100%" /></a>
+            </div>
+        </main>
+        <footer class="bg-primary bg-gradient border-top text-center text-white">
+            <div class="container-fluid">
+                <div class="row px-3 py-3">
+                    <div class="col-12 col-lg-4 text-light">
+
+                        <div class="col-auto">
+                            <div class="social">
+                                <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                        height="32" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg></a>
+                                <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                        height="32" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-8 p-3">
+                        <span class="footer">
+                            <p>
+                                Il Corriere del Developer è stata la principale rivista per aspiranti creativi online e
+                                professionisti del settore. Ha offerto progetti pratici all'avanguardia che abbracciano
+                                HTML, CSS, Bootstrap e WordPress, oltre a funzionalità di hosting e interviste con le
+                                persone più influenti della comunità web.
+                            </p>
+                        </span>
+                        <ul class="list-inline footer__menu text-center text-lg-left pb-3">
+                            <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white"
+                                    href="/cookie-policy/"><u>Informativa sui cookie</u></a></li>
+                            <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white"
+                                    href="/normativa-privacy/"><u>Privacy Policy</u></a></li>
+                            <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white"
+                                    href="/termini-e-condizioni/"><u>Termini e condizioni</u></a></li>
+                            <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white"
+                                    href="/contatti/"><u>Contatti</u></a></li>
+                            <li class="list-inline-item"><a rel="nofollow" class="d-inline-block text-white"
+                                    href="#"><u>Lavora con noi</u></a></li>
+
+                            <li class="list-inline-item mt-2 mt-lg-0">
+                                <a href="#"
+                                    class="iubenda-advertising-preferences-link d-inline-block text-white"><u>Aggiorna
+                                        le impostazioni di tracciamento della pubblicità</u></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-0" />
+            <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2022 Copyright:
+                <a class="text-white" href="#">Il corriere del developer </a>
+
+        </footer>
+
+        <footer>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <span class="mb-3 mb-md-0 text-muted" style="font-size: xx-small;">Copyright 2022 © RCS
+                            Mediagroup S.p.a. Tutti i diritti sono
+                            riservati | Per la pubblicità : CAIRORCS MEDIA SpA - Direzione
+                            Pubblicità RCS MediaGroup S.p.A. - Divisione Quotidiani Sede legale:
+                            via Angelo Rizzoli, 8 - 20132 Milano | Capitale sociale: Euro
+                            270.000.000,00 Codice Fiscale, Partita I.V.A. e Iscrizione al
+                            Registro delle Imprese di Milano n.12086540155 | R.E.A. di Milano:
+                            1524326 | ISSN 2499-0485
+                            <ul>
+                                <li><a href="/features">Termini e condizioni</a></li>
+                                <li><a href="/pricing">Privacy Policy</a></li>
+                            </ul>
+                        </span>
+                    </div>
+                    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                        <li class="ms-3">
+                            <a href="https://www.instagram.com/"><img
+                                    src="https://img.icons8.com/fluency/512/instagram-new.png" width="40px"
+                                    alt="instagram" /></a>
+                        </li>
+                        <li class="ms-3">
+                            <a href="https://www.facebook.com/"><img src="https://img.icons8.com/color/512/facebook.png"
+                                    width="40px" alt="fb" /></a>
+                        </li>
+                        <li class="ms-3">
+                            <a href="https://www.twitter.com/"><img
+                                    src="https://img.icons8.com/color/512/twitter-squared.png" width="40px"
+                                    alt="twitter" /></a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
