@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News and reviews for Apple</title>
+
+<style>
+nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '*';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+article {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    color: darkblue;
+    margin: 2px;
+    border:1px solid #000;
+    border-radius: 15px;
+    padding: 10px; 
+}
+
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+</style>
+
+<figure>
+    <img src="https://9to5mac.com/wp-content/uploads/sites/6/2018/10/cropped-cropped-9to5-mac-logo-min1.png"
+         alt="9tomac">
+    <figcaption>News and reviews for Apple products, apps, and rumors. We provide breaking coverage for the iPhone, iPad, and all things Mac!</figcaption>
+</figure>
+    
+
+</head>
+<body>
+    <!-- to do
+    - figure da inserire non in header
+    - testi da inserire 
+    - altre parti a piacere
+    - immagine di header
+    -->
+<header>
+    <nav class="crumb">
+        <ul>
+            <li><a href="#">Iphone</a></li>
+            <li><a href="#">Apple News</a></li>
+            <li><a href="#">Guides</a></li>
+        </ul>
+    </nav>
+    <h1>TODAY</h1>
+</header>
+<section>
+    <header>
+        <h2>My Blog Posts</h2>
+    </header>
+    <article>
+        <header>
+            <p>Elon thanks Tim Cook for tour of ‘Apple’s beautiful HQ’ as Twitter Blue on pause to avoid 30% App Store fee</p>
+        </header>
+        <details>
+            <summary>Little article summary</summary>
+        </details>
+        <p>Following Elon Musk calling out Apple and Tim Cook over a drop in advertising spend on Twitter, its 30% App Store fee, and more, there’s been a shift. This afternoon, Musk tweeted a thank you to the Apple CEO for a tour of the company’s “beautiful HQ.”
+
+            In an interesting turn of events, Musk’s tweet – which includes a five-second video pan of what appears to be Apple Park – says “Thanks @tim_cook for taking me around Apple’s beautiful HQ”.
+            
+            That comes after Musk said the iPhone maker mostly stopped its advertising on Twitter and asked the question “Do they hate free speech in America?” Apple nor Tim Cook responded to that.
+            
+            If Elon’s tweet this afternoon is as it seems, it appears Cook invited him over to Cupertino to chat in person.</p>
+        <time>2013-12-28</time>
+    </article>
+
+    <article>
+        <header>
+            <p>Apple releases iOS 16.1.2 with Crash Detection improvements for iPhone 14 users</p>
+        </header>
+        <details>
+            <summary>Little article summary</summary>
+        </details>
+        <p>Apple on Wednesday released iOS 16.1.2 for all users. The update, which is now available, improves the reliability of the Crash Detection feature for iPhone 14 and iPhone 14 Pro users. According to Apple, it also improves compatibility with wireless carriers.</p>
+        <time>2013-12-28</time>
+    </article>
+    <footer>
+        Blog post footer space
+    </footer>
+</section>
+<aside>
+    <p>Author info</p>
+</aside>
+<footer>
+    Contact info
+</footer>
+</body>
+</html>

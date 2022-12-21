@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floated</title>
+    <a name="su"></a>
+</head>
+<style>
+    /* 1 STEP : box sizing and lobotimized owl */
+
+    :root {
+        box-sizing: border-box;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: inherit;
+    }
+
+    body *+* {
+        margin-top: 1.5em;
+    }
+
+    /* 2 STEP : generic styling rules */
+
+    body {
+        background: #222831;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        margin-bottom: 1.5em;
+    }
+
+    header,
+    footer {
+        background-color: #FD7013;
+        padding: 1.5em;
+        color: #fff;
+    }
+
+    main {
+        background: #EEEEEE;
+        padding: 0 1.5em 1.5em 1.5em;
+    }
+
+    header,
+    footer,
+    main {
+        border-radius: 5px;
+    }
+
+    article {
+        /* background-color: #0D4D7C; */
+        background: rgb(68,203,170);
+        background: linear-gradient(to bottom, #D7E4F4, #B4D1E7, #91BEDA);
+        padding: 1.5em;
+        border-radius: 15px;
+        background-color: #f6ebf4;
+        border-bottom: 7px solid #0000001f;
+    }
+
+    article h4 {
+        margin: 0;
+    }
+
+    /* 3 STEP : applying float section */
+
+    /* double container pattern */
+    .container {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    article {
+        float: left;
+        width: 50%;
+    }
+
+    /* 4 STEP : fixing floating section */
+
+    section::after {
+        display: block;
+        content: " ";
+        clear: both;
+    }
+
+    /* 5 STEP : article margins */
+
+    article {
+        margin: 0 1.5em 1.5em 0;
+        width: calc(50% - 1.5em);
+    }
+
+    /*fixes the margins of the edge children*/
+    section {
+        margin-right: -1.5em;
+        margin-bottom: -1.5em;
+    }
+
+    /* 6 STEP : Fixes collapsing margin of section title */
+
+    section::before {
+        display: table;
+        content: " ";
+    }
+
+    /* 7 STEP : grid row clearfix */
+
+    .articles> :nth-child(2n+1) {
+        clear: left;
+    }
+
+    /* 8 STEP : grid element styling */
+
+    .articles img {
+        float: left;
+        margin: 0 1.5em 1.5em 0;
+    }
+
+    .articles .article-body {
+        overflow: auto;
+    }
+    
+    #separati {
+    padding-block: 1px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+</style>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="https://images.macrumors.com/images-new/macrumors-simple-logo-light.svg">
+            <h4 style="text-align: center;">Mac and Apple-related news and rumors</h4>
+        </header>
+        <main>
+            <section>
+                <h2 style="text-align: center;">IN DATA ODIERNA</h2>
+                <div class="articles">
+                    <article>
+                        <img src="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/classificacao-1/paginas-classificacao-indicativa/twitter.png" width="150" height="150" alt="img1" class="media-image">
+                        <div class="article-body">
+                            
+                            <h4><a href="https://9to5mac.com/2022/12/11/twitter-blue-features-price/">
+                                Twitter Blue rilancia lunedì
+                            </a></h4>
+                            <p>
+                                Twitter è pronto a rilanciare il servizio di abbonamento Twitter Blue lunedì. Dopo le speculazioni, la società ha ufficialmente fatto l'annuncio questo fine settimana.
+                            </p>
+
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://static.techspot.com/images2/downloads/topdownload/2019/09/2019-09-04-ts3_thumbs-69c.png" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/10/tor-browser-apple-silicon-optimized/">
+                                Tor Browser ora ottimizzato per Apple Silicon con la nuova app universale
+                            </a></h4>
+                            <p>
+                                Tor Browser è ora ottimizzato per Apple Silicon, grazie a un nuovo aggiornamento lanciato questa settimana Tor Bowser 12.0.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=1808&hei=1680&fmt=png-alpha&.v=1632788573000" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/10/unreleased-macs-spotted-in-new-database/">Mac inediti individuati nel database prima del presunto lancio all'inizio del 2023</a></h4>
+                            <p>
+                                Nelle ultime settimane, abbiamo visto alcuni hardware Mac inediti emergere dai risultati dei test di Geekbench. Ora, un paio di Mac inediti sono emersi in un altro database
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://static.vecteezy.com/system/resources/previews/008/477/245/original/realistic-3d-gift-box-cutout-free-png.png" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/10/9to5mac-gift-guide-holiday-gifts-for-it-professionals-and-tech-enthusiasts/">Guida ai regali 9to5Mac: regali di Natale per professionisti IT e appassionati di tecnologia</a></h4>
+                            <p>
+                                Con la stagione dello shopping natalizio in pieno svolgimento, sto lavorando alla mia guida ai regali di Natale. Come persona con una passione per l'IT, la mia lista è sempre abbastanza unica!
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://images.squarespace-cdn.com/content/v1/61505c55c04b0a138b337894/1661093949457-768HYR39WJYE0U411FA6/ios-16-icon.png?format=1000w" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/09/ios-16-adoption-numbers-vs-android/">L'adozione di iOS 16 raggiunge il 69% grazie a funzionalità interessanti</a></h4>
+                            <p>
+                                L'adozione di iOS 16 continua a crescere man mano che Apple vende più unità iPhone 14 e risolve alcuni dei primi bug del software. Secondo gli ultimi dati di Mixpanel, iOS 16 è ora installato sul 68,95% degli iPhone tre mesi dopo il rilascio
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://img.icons8.com/material/480/epic-games.png" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/08/tim-sweeney-inteview-apple-app-store-twitter/">Tim Sweeney: Epic Games "combatterà per la vittoria, qualunque cosa costi" nella battaglia contro Apple</a></h4>
+                            <p>
+                                Il CEO di Epic Games, sta raddoppiando la sua battaglia contro Apple e l'App Store. In una nuova intervista , Sweeney ha minacciato di portare la lunga causa alla Corte Suprema
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968601.png" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/07/december-apple-pay-promo/">L'ultima promozione Apple Pay offre sconti per le vacanze presso Columbia, GOAT, Le Creuset e altri</a></h4>
+                            <p>
+                                La scorsa settimana è arrivata un'offerta di rimborso del 5% per i nuovi clienti della Apple Card. Si scopre che c'è anche una promozione di dicembre su Apple Pay che porta alcuni preziosi risparmi per le vacanze.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="https://png.monster/wp-content/uploads/2022/01/png.monster-470.png" width="140" height="140" alt="img1" class="media-image">
+                        <div class="article-body">
+                            <h4><a href="https://9to5mac.com/2022/12/01/apple-watch-ultra-vs-series-8/">Apple Watch Ultra vs Series 8 vs SE: qual è la scelta migliore per le vacanze?</a></h4>
+                            <p>
+                                C'è più varietà che mai con la gamma Apple Watch 2022 grazie al nuovo modello Ultra e all'SE aggiornato. Ciò significa che c'è molto da considerare tra gli ultimi dispositivi indossabili e anche i loro predecessori.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+             <div id="separati">
+                <span>© 9to5mac 2022</span>
+                <span><a href="#su">Torna su</a></span>
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>

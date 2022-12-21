@@ -1,0 +1,51 @@
+p {
+    border: 0.8em darkviolet;
+    border-style: dotted double;
+    margin: 1em 0;
+    padding: 1.4em;
+    background: linear-gradient(60deg, red, yellow, red, yellow, red);
+    font: 900 1.2em sans-serif;
+    text-decoration: underline;
+  }
+  
+  .border-box {
+    background-clip: border-box;
+  }
+  .padding-box {
+    background-clip: padding-box;
+  }
+  .content-box {
+    background-clip: content-box;
+  }
+  
+  .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  .exampleone {
+    background-color: transparent;
+  }
+  
+  .exampletwo {
+    background-color: rgb(153, 102, 153);
+    color: rgb(255, 255, 204);
+  }
+  
+  .examplethree {
+    background-color: #777799;
+    color: #ffffff;
+  }
+
+  .sfondo {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url("../assets/lizard.png"); 
+  }
+
+  .sfondostella {
+    background-image: url("../assets/lizard.png"), url("../assets/startransparent.gif");
+    background-position: 0px 0px, right 3em bottom 2em;
+    background-repeat: repeat-y;
+  }
+  
