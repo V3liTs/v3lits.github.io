@@ -1,38 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards</title>
+    <style>
+        .deck .card {
+            border: solid 1px #aaa;
+            border-radius: 9px;
+            width: 95px;
+            height: 150px;
+            float: left;
+            background-color: white;
+            padding: 3px 3px 3px 3px;
+            margin: 5px;
+        }
+
+        .card2 {
+            width: 50px;
+            padding: 10px;
+            border: solid 1px #808080;
+            background-color: white;
+            display: inline-block;
+            border-radius: 10px;
+            font-size: 22px;
+            text-align: center;
+            margin: 3px;
+            border: solid 3px;
+        }
+
+        .card .value {
+            font-size: 15pt;
+            font-family: sans-serif;
+        }
+
+        .card .suit {
+            background-image: url('assets/semi.png');
+            height: 100px;
+            width: 90px;
+        }
+
+        .card .diamonds {
+            background-position-y: 100px;
+        }
+
+        .card .hearts {
+            background-position-x: 90px;
+        }
+
+        .card .clubs {
+            background-position-x: 90px;
+            background-position-y: 100px;
+        }
+    </style>
 </head>
 
 <body>
     <script>
         var suits = ["spades", "diamonds", "clubs", "hearts"];
         var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-
+        var deck = new Array();
         //52 carte 13 carte per seme
 
         //crea mazzo
         function getDeck() {
             let deck = new Array();
             for (let i = 0; i < suits.length; i++) {
-                console.log ("Analizzo seme "+suits[i]);
+                console.log("Analizzo seme " + suits[i]);
                 for (let x = 0; x < values.length; x++) {
-                    console.log ("      Creao carta "+ values[x]);
+                    console.log("      Creao carta " + values[x]);
                     let card = { Value: values[x], Suit: suits[i] };
-                    console.log (card);
+                    console.log(card);
                     deck.push(card);
                 }
             }
-            console.log ("Mazzo creato");
+            console.log("Mazzo creato");
             return deck;
         }
 
-        console.log (getDeck());
+        //mescolo mazzo
+        function shuffle() {
+            // for 1000 turns
+            // switch the values of two random cards
+            for (let i = 0; i < 1000; i++) {
+                let location1 = Math.floor((Math.random() * deck.length));
+                let location2 = Math.floor((Math.random() * deck.length));
+                let tmp = deck[location1];
+                deck[location1] = deck[location2];
+                deck[location2] = tmp;
+            }
+            renderDeck();
+        }
+
+        //mostra mazzo
+        function renderDeck() {
+            document.getElementById("deck").innerHTML = "";
+
+            /*
+            <div class="card">
+                <div class="value">J</div>
+                <div class="suit diamonds"></div>
+            </div>
+            */
+            for (let i = 0; i < deck.length; i++) {
+                let card = document.createElement("div");
+                let value = document.createElement("div");
+                let suit = document.createElement("div");
+                card.className = "card";
+                value.className = "value";
+                suit.className = "suit " + deck[i].Suit;
+
+                value.innerHTML = deck[i].Value;
+                card.appendChild(value);
+                card.appendChild(suit);
+
+                document.getElementById("deck").appendChild(card);
+            }
+        }
+
+        //quando la pagina viene caricata
+        function load() {
+            deck = getDeck();
+            shuffle();
+            renderDeck();
+        }
+
+        window.onload = load;
     </script>
+
+
+    <div class="deck">
+        <h1>Mazzo di carte</h1>
+        <a href="javascript:void(0)" class="btn" onclick="shuffle()">Mischia le carte</a>
+        <div id="deck"></div>
+    </div>
+
 
 </body>
 
