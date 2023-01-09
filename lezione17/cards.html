@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+</head>
+
+<body>
+    <script>
+        var suits = ["spades", "diamonds", "clubs", "hearts"];
+        var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+        //52 carte 13 carte per seme
+
+        //crea mazzo
+        function getDeck() {
+            let deck = new Array();
+            for (let i = 0; i < suits.length; i++) {
+                console.log ("Analizzo seme "+suits[i]);
+                for (let x = 0; x < values.length; x++) {
+                    console.log ("      Creao carta "+ values[x]);
+                    let card = { Value: values[x], Suit: suits[i] };
+                    console.log (card);
+                    deck.push(card);
+                }
+            }
+            console.log ("Mazzo creato");
+            return deck;
+        }
+
+        console.log (getDeck());
+    </script>
+
+</body>
+
+</html>

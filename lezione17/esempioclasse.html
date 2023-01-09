@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Canzone {
+            constructor(title, author, type) {
+                this.title = title;
+                this.author = author;
+                this.type = type;
+            }
+
+            play() {
+                console.log('Sta suonando la canzone!');
+            }
+
+            playWithTitle() {
+                console.log('Sta suonando la canzone ' + this.title);
+            }
+
+            get fullSong() {
+                return `Canzone: ${this.title} Autore : ${this.author}`;
+            }
+
+            get getSong() {
+                return this.title;
+            }
+
+            set setSong(title) {
+                this.title = title;
+            }
+
+            get getAuthor() {
+                return this.author;
+            }
+
+            set setAuthor(author) {
+                this.author = author;
+            }
+        }
+
+        //inizializzo con un valore
+        const miaCanzone = new Canzone("Bohemian Rhapsody", "Queen", "mp3");
+        console.log(miaCanzone.fullSong);
+        miaCanzone.playWithTitle();
+        //settare dopo i valori coi metodi set 
+        miaCanzone.setSong = "Alba chiara";
+        miaCanzone.setAuthor = "Vasco Rossi";
+
+        //... e recuperarli con metodi get
+        console.log(miaCanzone.fullSong);
+
+        miaCanzone.play();
+
+        miaCanzone.playWithTitle();
+    </script>
+</body>
+
+</html>

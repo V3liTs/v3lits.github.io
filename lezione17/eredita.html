@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eredita</title>
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+
+            constructor(height, width) {
+                this.name = "Rectangle";
+                this.height = height;
+                this.width = width;
+                var colore = "rosso";
+
+                this.colore = colore;
+            }
+            sayName() {
+                console.log(`Hi, I am a ${this.name}.`);
+            }
+
+            sayMyColor()
+            {
+                console.log("My color is "+this.colore);
+            }
+
+            get area() {
+                return this.height * this.width;
+            }
+            set area(value) {
+                this._area = value;
+            }
+        }
+
+        class Square extends Rectangle {
+            constructor(length) {
+                super(length, length);
+                this.name = "Square";
+                var colore = "verde";
+            }
+
+            sayHello() {
+                console.log ("Ciao sono "+this.name);
+            }
+        }
+
+
+        const primoPoligono = new Rectangle(10, 15);
+        primoPoligono.sayName();
+        console.log ("Area del rettangolo "+primoPoligono.area);
+        primoPoligono.sayMyColor();
+        //primoPoligono.sayHello();  //vi da errore perché metodo non esiste nel padre
+        const secondoPoligono = new Square(15);
+        secondoPoligono.sayName();
+        console.log ("Area del quadrato "+secondoPoligono.area);
+        secondoPoligono.sayHello();
+        secondoPoligono.sayMyColor();
+
+        /*
+        Hi, I am a Rectangle.
+    Hi, I am a Square.
+        */
+    </script>
+</body>
+
+</html>
