@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var daysOfWeek = new Array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
+        console.log(daysOfWeek[3]);
+        console.log("Contiene " + daysOfWeek.length + " elementi");
+
+        console.log("***** Ora uso ciclo for ******");
+        for (let singleDay = 0; singleDay < daysOfWeek.length; singleDay++) {
+            console.log("Posizione " + singleDay + " Nome del giorno " + daysOfWeek[singleDay]);
+            if (daysOfWeek[singleDay] == 'Lunedì') {
+                console.log("Il primo giorno della settimana");
+                //chiama la funzione pagaBollette...
+                //invia mail di memorandum
+            }
+        }
+
+        //altro modo di dichiarare un array
+        const fruits = [];
+        fruits.push("banana", "apple", "peach");
+        console.log("Num elementi " + fruits.length);
+
+        const clothing = ['shoes', 'shirts', 'socks', 'sweaters'];
+        console.log(clothing.length);
+
+        const numbers = [1, 2, 3, 4, 5];
+        const length = numbers.length;
+        for (let i = 0; i < length; i++) {
+            numbers[i] *= 2;
+        }
+
+        const months = ['March', 'Jan', 'Feb', 'Dec'];
+        months.sort();
+        console.log(months);
+        // expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+        const array1 = [1, 30, 4, 21, 100000];
+        array1.sort();
+        console.log(array1);
+        // expected output: Array [1, 100000, 21, 30, 4]
+
+        //Array ordinato su due valori
+        const items = [
+            { name: "Edward", value: 21 },
+            { name: "Sharpe", value: 37 },
+            { name: "And", value: 45 },
+            { name: "The", value: -12 },
+            { name: "Magnetic", value: 13 },
+            { name: "Zeros", value: 37 },
+        ];
+
+        // sort by value
+        items.sort((a, b) => a.value - b.value);
+
+        // sort by name
+        items.sort((a, b) => {
+            const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+            const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            // names must be equal
+            return 0;
+        });
+
+        console.log(items);
+
+        //REVERSE
+        const arrayC = ['one', 'two', 'three'];
+        console.log('arrayC:', arrayC);
+        // expected output: "array1:" Array ["one", "two", "three"]
+
+        const reversed = arrayC.reverse();
+        console.log('reversed:', reversed);
+        // expected output: "reversed:" Array ["three", "two", "one"]
+
+        // Careful: reverse is destructive -- it changes the original array.
+        console.log('arrayC:', arrayC);
+        // expected output: "array1:" Array ["three", "two", "one"]
+
+        //ESEMPI for each per iterare gli array
+        const arrayA = ['a', 'b', 'c', 'k'];
+        arrayA.forEach(myPart => console.log(myPart));
+
+        const array2 = ['a', 'b', 'c', 'k'];
+        array2.forEach(myPart => console.log(myPart));
+
+        array2.forEach((valore, index) => {
+            console.log("indice " + index + " valore " + valore);
+            if (index == 3) {
+                console.log("K è una vitamina");
+            }
+            if (valore == 'b') {
+                console.log("Anche B è una vitamina");
+            }
+        })
+
+        //Find
+        const inventory = [
+            { name: "apples", quantity: 2 },
+            { name: "bananas", quantity: 0 },
+            { name: "cherries", quantity: 5 },
+            { name: "lamponi", quantity: 82 },
+        ];
+
+        function isCherries(pippo) {
+            return pippo.name === "lamponi";
+        }
+
+        console.log(inventory.find(isCherries));
+
+    </script>
+</body>
+
+</html>

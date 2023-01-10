@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+</head>
+
+<body>
+    <script>
+        //Calendario
+        //dato un mese ti stampi il numero dei giorni (1,2,3... 30)
+        //array mesi , array giorni
+        var weekDays = Array("Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab");
+        var months = Array('Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic');
+        var monthDays = Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+        //prompt inserisci numero mese / anno
+        //5-1 -> recuperiamo il nome mese
+        //cambiare 
+        var userMonth = prompt("Inserisci il numero del mese");
+        //controllo che sia compreso fra 1 e 12 e che sia un numero...)
+        var userYear = prompt("Inserisci l'anno");
+
+        alert("Hai inserito " + userMonth + "-" + userYear);
+
+        //controllo che sia un numero
+        //se non sono numeri scrivo che deve inserire dei numeri metto alert
+        var calculate = true;
+        if (isNaN(userMonth)) {
+            alert("Devi inserire un numero per il mese");
+            calculate = false;
+        }
+
+        if (isNaN(userYear)) {
+            alert("Devi inserire un numero per l'anno");
+            calculate = false;
+        }
+
+        //se non ha inserito dei valori numeri non entra qui
+        if (calculate) {
+            //TODO trasformare in una funzione
+            var monthToShow = months[userMonth - 1];
+            var myMonth = months.indexOf(monthToShow);
+            var daysOfMyMonth = monthDays[myMonth];
+            console.log(monthToShow + " ha " + daysOfMyMonth + " giorni"); 
+            //Date trovare che giorno era 1 mag 2023
+            const myDate = new Date(userYear, userMonth - 1, 1);
+            var j = myDate.getDay();
+            var risposta = "";
+            for (var i = 1; i < daysOfMyMonth + 1; i++) {
+                j = (j % 7);
+                risposta += weekDays[j] + ' ' + i + ' ' + monthToShow + '\n';
+                j++;
+            }
+            console.log(risposta);
+        }
+
+
+        /*
+                                            for (let day = 1; day <= daysOfMyMonth; day++) {
+                                            console.log ("xxxx "+ day + " "+monthToShow);
+                                            }
+                                */
+            //Visulizzare Maggio 2024
+            //che giorno è il 1 maggio 2024
+            //ciclo gli array e mostro calendario
+            //lunedì 1 maggio
+            //martedì 2 maggio...
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Funzioni</title>
+</head>
+
+<body>
+    <script>
+        //funzione Square
+        const square = function (number) {
+            return number * number;
+        }
+        var num = 4;
+        const x = square(num);
+        console.log("Il quadrato di " + num + " è " + x);
+
+        //funzione anonima
+        const factorial = function fac(n) {
+            return n < 2 ? 1 : n * fac(n - 1);
+        }
+        console.log(factorial(3))
+
+        var ciaoMondo = function () {
+            console.log("Ciao mondo");
+        }
+
+        ciaoMondo();
+
+        //ARROW function
+
+        // Traditional anonymous function
+        var a = 0;
+     ((function (a) {
+            return a + 100;
+        }));
+        
+
+        // 1. Remove the word "function" and place arrow between the argument and opening body bracket
+        (a) => {
+            return a + 100;
+        };
+
+
+        // 2. Remove the body braces and word "return" — the return is implied.
+        (a) => a + 100;
+
+        // 3. Remove the parameter parentheses
+        a => a + 100;
+        console.log (a);
+    </script>
+
+</body>
+
+</html>

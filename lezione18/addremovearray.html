@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add remove</title>
+</head>
+
+<body>
+    <script>
+        //delete last element
+        const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+        console.log(plants.pop());
+        // expected output: "tomato"
+
+        console.log(plants);
+        // expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+        plants.pop();
+
+        console.log(plants);
+        // expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+        const array1 = [1, 2, 3];
+
+        const firstElement = array1.shift();
+
+        console.log(array1);
+        // expected output: Array [2, 3]
+
+        console.log(firstElement);
+        // expected output: 1
+
+        const animals = ['pigs', 'goats', 'sheep'];
+        console.log(animals.length);
+
+        const count = animals.push('cows');
+        console.log(count);
+        // expected output: 4
+        console.log(animals);
+        // expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+        const newCount = animals.push('chickens', 'cats', 'dogs');
+        console.log(newCount);
+        console.log(animals);
+        // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
+        console.log(animals.unshift("gorilla", "panthera"));
+        // expected output: 5
+
+        console.log(animals);
+
+    </script>
+
+</body>
+
+</html>
