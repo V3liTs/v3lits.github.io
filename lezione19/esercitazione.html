@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio</title>
+</head>
+
+<body>
+    <div id="id-1">
+        <p id="param-1">Welcome to my web page.</p>
+        <p id="param-2">Please take a look around.</p>
+        <input id="btn" value="Replace Element" type="button" />
+    </div>
+    <script>
+        function onClickEventHandler(e) {
+            const targetClicked = e.target;
+            targetClicked.disabled = true;
+
+            //STEP 1 seleziono e cancello il primo P
+            const firstP = document.getElementById("param-1");
+            firstP.remove(); //Cancello elemento
+
+            //STEP 2 creo un elemento h3 col suo testo
+            const h3elem = document.createElement('h3');
+            const h3Text = document.createTextNode("Welcome");
+            h3elem.appendChild(h3Text);
+
+            //STEP 3 selezione il secondo P e incollo il mio elemento al suo livello
+            const secondP = document.getElementById("param-2");
+            secondP.insertAdjacentElement('beforebegin', h3elem);
+
+            //inserisco un altro h1
+            const h1elem = document.createElement('h1');
+            const h1Text = document.createTextNode("TITOLO PRINCIPALE");
+            h1elem.appendChild(h1Text);
+            //document.body.appendChild(h1elem);
+
+            const myDiv = document.getElementById("id-1");
+            myDiv.insertAdjacentElement('afterbegin', h1elem);
+        }
+
+        function triggerClickEvent() {
+            console.log("clicked");
+            const elm = document.getElementById("btn");
+            elm.click();
+        }
+
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", onClickEventHandler);
+    </script>
+</body>
+</html>

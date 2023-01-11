@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <script>
+        window.onload = () => {
+            // create a couple of elements in an otherwise empty HTML page
+            const heading = document.createElement("h1");
+            const headingText = document.createTextNode("Ciao mondo!");
+            heading.appendChild(headingText);
+            document.body.appendChild(heading);
+        };
+        //let risposta = confirm("Vuoi uscire dal programma?");
+        //console.log (risposta);
+
+    </script>
+    <style>
+        .container {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+            border-color: blue;
+        }
+
+        .prova {
+            font-weight: 900;
+            font-size: x-large;
+        }
+
+        button {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Titolo che scompare</h3>
+
+    <p>Questo è il mio testo</p>
+    <div class="container">
+        <textarea class="story"></textarea>
+        <button id="set-text" type="button">Inserisci testo</button>
+        <button id="clear-text" type="button">Cancella testo</button>
+    </div>
+
+    <table id="outside">
+        <th>
+        <td>HEADER</td>
+        </th>
+        <tr>
+            <td id="t1">one</td>
+        </tr>
+        <tr>
+            <td id="t2">two</td>
+        </tr>
+    </table>
+
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+    <button onclick="changeColor('green');">green</button>
+
+    <br>
+    <button onclick="cancellaTitolo();">Cancella titolo</button>
+    <button onclick="creaTitolo();">Crea titolo</button>
+
+    <script>
+        //tre modi di queryselector di selezionare elementi .classi / #id / tag
+        const story = document.body.querySelector(".story");
+        const setText = document.body.querySelector("#set-text");
+        const myPar = document.body.querySelector("p");
+        myPar.innerHTML = "Benvenuto";
+
+        setText.addEventListener("click", () => {
+            story.textContent = "It was a dark and stormy night...";
+            myPar.textContent = "Notte buia e tempestosa";
+        });
+        const clearText = document.body.querySelector("#clear-text");
+        clearText.addEventListener("click", () => {
+            story.textContent = "";
+            myPar.textContent = "hai svuotato tutto!"
+        });
+
+        //seconda tabella
+        function modifyText() {
+            const t2 = document.getElementById("t2");
+            const isNodeThree = t2.firstChild.nodeValue === "three";
+            t2.firstChild.nodeValue = isNodeThree ? "two" : "three";
+        }
+
+        // Add event listener to table
+        const el = document.getElementById("outside");
+        el.addEventListener("click", modifyText, false);
+
+        function changeColor(newColor) {
+            const elem = document.getElementById('para');
+            elem.style.color = newColor;
+            elem.innerHTML = "yellow";
+            elem.className = "prova";
+
+            if (elem.hasAttributes()) {
+                for (const attr of elem.attributes) {
+                    console.log(attr.name + " " + attr.value);
+                }
+            } else {
+                console.log("No attributes to show");
+            }
+        }
+
+        function removeAllChildren(element) {
+            while (element.firstChild) {
+                console.log(element.firstChild);
+                element.removeChild(element.firstChild);
+            }
+        }
+        function cancellaTitolo() {
+            removeAllChildren(document.body.querySelector("h3"));
+        }
+        function creaTitolo() {
+            console.log("creo titolo");
+            const h3new = document.createElement("h3");
+            const h3Text = document.createTextNode("Nuovo titolo");
+            h3new.appendChild(h3Text);
+            document.body.appendChild(h3new);
+        }
+
+    </script>
+</body>
+
+</html>
