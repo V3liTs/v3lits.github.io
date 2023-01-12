@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <script>
+        console.log("Lingua del browser " + navigator.language);
+        console.log("Browser " + navigator.userAgent);
+        console.log("Il tuo schermo è " + window.screen.width + " x " + window.screen.height);
+
+        const anchor = document.createElement("a");
+        anchor.href = "https://developer.mozilla.org/en-US/Location.host";
+        console.log(anchor.href);
+        console.log(anchor.host);
+        console.log(anchor.protocol);
+
+        if (!navigator.cookieEnabled) {
+            alert("Abilita i cookie!");
+        }
+        else {
+            console.log("Cookie ok");
+        }
+    </script>
+
+</body>
+
+</html>

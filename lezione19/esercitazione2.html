@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom-3</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>things to do</h1>
+    <h1>Things to do</h1>
     <ol id="toDoList">
-        <li>Mow the lawn</li>
+        <li class="important" about="something">Mow the lawn</li>
         <li>Clean the windows</li>
-        <li>Answer your email</li>
+        <li class="important">Answer your email</li>
+        <li class="important">Prova</li>
     </ol>
-
     <p id="toDoNotes">Make sure all these are game on TV!</p>
-    
+    <script>
+        function countListItems() {
+            const olElement = document.getElementById("toDoList");
+            let count = 0;
+            for (let i = 0; i < olElement.childNodes.length; i++) {
+                if (olElement.childNodes[i].nodeType === 1) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        alert("The ordered list contains " + countListItems() + " items.")
+    </script>
 </body>
 </html>
