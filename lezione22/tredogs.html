@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+    <style>
+        img {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        button {
+            color: blue;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My dogs</h1>
+    <button id="showNewImageButton">Mostra nuove immagini</button>
+
+    <script>
+        const addImage = function (urlPhoto, idPhoto) {
+            console.log("addImage con " + urlPhoto + " id " + idPhoto);
+            let targetImg = document.createElement("img");
+            targetImg.setAttribute("id", idPhoto);
+            targetImg.setAttribute("src", urlPhoto);
+            const button = document.getElementById("showNewImageButton");
+            //document.body.appendChild(targetImg);
+            button.insertAdjacentElement('beforebegin', targetImg);
+        }
+
+        const updateImage = function (urlPhoto, idPhoto) {
+            console.log("updateImage con " + urlPhoto + " id " + idPhoto);
+            let targetImg = document.getElementById(idPhoto);
+            targetImg.setAttribute("src", urlPhoto);
+        }
+
+        const populateImages = function (url, imgIdName) {
+            console.log("populateImages con " + url + " id " + imgIdName);
+            //check se img esiste
+            if (document.getElementById(imgIdName) != null) {
+                //esiste
+                updateImage(url, imgIdName);
+            } else {
+                //se non esiste lo creo
+                addImage(url, imgIdName);
+            }
+        }
+
+        const fetchImage = function (imgId) {
+            fetch(callMyApi).then(function (response) {
+                console.log(response);
+                console.log("Risposta status: " + response.status);
+                response.json().then(function (json) {
+                    console.log(json);
+                    let url = json.message;
+                    console.log("Indirizzo della foto: " + url);
+                    populateImages(url, imgId);
+                });
+            }).catch((errorMessage) => {
+                console.log(`Non raggiungibile: ${errorMessage}`);
+            });
+        }
+
+        const showImage = function () {
+            let imgIdsNames = ["photo1", "photo2", "photo3", "photo4"];
+            for (let index = 0; index < imgIdsNames.length; index++) {
+                fetchImage(imgIdsNames[index]);
+            }
+        }
+
+        const buttonClick = document.getElementById("showNewImageButton");
+        buttonClick.addEventListener('click', () => {
+            console.log("Bottone premuto");
+            showImage();
+        });
+
+        //my vars
+        let callMyApi = "https://dog.ceo/api/breeds/image/random";
+        let imgIdName = "dogphoto";
+        showImage();
+    </script>
+</body>
+
+</html>

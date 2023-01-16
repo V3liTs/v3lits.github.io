@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La prima chiamata</title>
+    <style>
+        img {
+            border: 1px solid black;
+            max-width: 300px;
+        }
+
+        button {
+            color: blue;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>L'immagine del mio cane</h1>
+    <button id="showNewImageButton">Mostra una nuova immagine</button>
+    
+    <script>
+        const addImage = function (urlPhoto, idPhoto) {
+            console.log("addImage");
+            let targetImg = document.createElement("img");
+            targetImg.setAttribute("id", idPhoto);
+            targetImg.setAttribute("src", urlPhoto);
+            const button = document.getElementById("showNewImageButton");
+            //document.body.appendChild(targetImg);
+            button.insertAdjacentElement('beforebegin', targetImg);
+        }
+
+        const updateImage = function (urlPhoto, idPhoto) {
+            console.log("updateImage");
+            let targetImg = document.getElementById(imgIdName);
+            targetImg.setAttribute("src", urlPhoto);
+        }
+
+        const showImage = function () {
+            fetch(callMyApi).then(function (response) {
+                console.log(response);
+                console.log("Risposta status: " + response.status);
+                response.json().then(function (json) {
+                    console.log(json);
+                    let url = json.message;
+                    console.log("Indirizzo della foto: " + url);
+                    //check se img esiste
+                    if (document.getElementById(imgIdName) != null) {
+                        //esiste
+                        updateImage(url, imgIdName);
+                    } else {
+                        //se non esiste lo creo
+                        addImage(url, imgIdName);
+                    }
+                });
+            }).catch((errorMessage) => {
+                console.log(`Non raggiungibile: ${errorMessage}`);
+            });
+        }
+
+        const buttonClick = document.getElementById("showNewImageButton");
+        buttonClick.addEventListener('click', () => {
+            console.log ("Bottone premuto");
+            showImage();
+        });
+
+        //my vars
+        let callMyApi = "https://dog.ceo/api/breeds/image/random";
+        let imgIdName = "dogphoto";
+        showImage();
+    </script>
+</body>
+</html>
