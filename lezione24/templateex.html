@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template ex</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <table id="producttable">
+        <thead>
+            <tr>
+                <td>UPC_Code</td>
+                <td>Product_Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- existing data could optionally be included here -->
+        </tbody>
+    </table>
+
+    <template id="productrow">
+        <tr>
+            <td class="record"></td>
+            <td></td>
+        </tr>
+    </template>
+    <script src="populate.js"></script>
+</body>
+</html>
