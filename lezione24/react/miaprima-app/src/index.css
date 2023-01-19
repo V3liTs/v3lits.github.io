@@ -1,5 +1,44 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.listclass {
+  font-weight: 600;
+  color:brown;
+}
+
+.textclass {
+  font-weight: normal;
+  color:blue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.textheader {
+  font-weight: bold;
+  color:red;
+}
+
+.tabella {
+  color: red;
+  display: flex;
+  border: chocolate solid 2px;
+  margin: 5px;
+}
+
+.colonna {
+  margin: 10px 10px;
+  color: blue;
+  display: inline;
+  border: aqua 1px solid;
 }
