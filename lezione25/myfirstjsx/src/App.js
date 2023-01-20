@@ -1,18 +1,24 @@
-import './App.css';
-import HelloWorld from './components/HelloWorld';
-import Orologio from './components/Orologio';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import HelloWorld from "./components/HelloWorld";
+import Orologio from "./components/Orologio";
+import BottoneContatore from "./components/BottoneContatore";
+import Esempio from "./Esempio";
+import Counter from "./Counter.js";
+import CounterReducer from "./CounterReducer";
 
-function Ciao (props) {
-  return <p>Ciao, {props.name}</p>
-}
-
-
-function App() {  
+function App() {
   return (
-    <div className="App">
-      <HelloWorld name="mondo"></HelloWorld>
-      <Ciao name="Paolo"></Ciao>
-      <Orologio></Orologio>
+    <div class="container">
+      <div class="text-center mt-5">
+        <HelloWorld name="mondo"></HelloWorld>
+        <p class="lead">A complete project boilerplate built with Bootstrap</p>
+        <BottoneContatore></BottoneContatore>
+        <Esempio></Esempio>
+        <Counter></Counter>
+        <CounterReducer></CounterReducer>
+       
+      </div>
     </div>
   );
 }
